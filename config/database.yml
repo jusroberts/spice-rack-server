@@ -46,7 +46,7 @@ test:
   adapter: postgresql
   encoding: unicode
   database: spice-rack-server_test
-  pool: 5
+  poobundlel: 5
   password:
 
 production:

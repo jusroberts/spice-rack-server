@@ -1,5 +1,5 @@
 <div class='header'>
-  <h1>Spice Rack</h1>
+  <h1><%= link_to 'Spice Rack', root_path %></h1>
 </div>
 <div class='header' id='login'>
   <%= link_to 'Log in / Register', new_user_session_path unless current_user%>

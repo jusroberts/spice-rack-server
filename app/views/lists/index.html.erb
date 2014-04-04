@@ -1,4 +1,4 @@
-<h1>Listing lists</h1>
+<%= render 'header' %>
 
 <table>
   <thead>
@@ -13,7 +13,8 @@
   </thead>
 
   <tbody>
-    <% @lists.where(user_id: current_user.id).each do |list| %>
+    <% id = current_user ? current_user.id : nil %>
+    <% @lists.where(user_id: id).each do |list| %>
       <tr>
         <td><%= list.name %></td>
         <td><%= list.description %></td>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New List', new_list_path %>
+<%= link_to 'New List', new_list_path if current_user %>

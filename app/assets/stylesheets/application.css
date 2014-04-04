@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+ 
+ .header {
+  display: inline-block;
+  width: 49%;
+ }
+ 
+ #login {
+  text-align: right;
+ }

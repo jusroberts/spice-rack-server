@@ -1,3 +1,7 @@
-<%= link_to 'Log in / Register', new_user_session_path unless current_user%>
-<%= link_to 'Log out', destroy_user_session_path, :method => :delete if current_user%>
-<%= debug current_user %>
+<div class='header'>
+  <h1>Spice Rack</h1>
+</div>
+<div class='header' id='login'>
+  <%= link_to 'Log in / Register', new_user_session_path unless current_user%>
+  <%= link_to 'Log out', destroy_user_session_path, :method => :delete if current_user%>
+</div>

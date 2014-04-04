@@ -5,6 +5,6 @@ SpiceRackServer::Application.routes.draw do
   resources :lists
 
   devise_for :users
-  root 'welcome#index'
+  root 'lists#index'
 
 end

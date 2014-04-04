@@ -1,24 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @list.name %>
+  <h2><%= @list.name %></h2>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @list.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @list.user_id %>
 </p>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Item</th>
       <th>Status</th>
       <th></th>
       <th></th>
@@ -31,9 +24,8 @@
       <tr>
         <td><%= item.name %></td>
         <td><%= item.in_stock ? 'In' : 'Out of' %> stock</td>
-        <td><%= link_to 'Show', item %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -41,5 +33,8 @@
     
 <% session[:list_id] = @list.id %>
 <%= link_to 'New Item', new_item_path %>
-<%= link_to 'Edit', edit_list_path(@list) %> |
-<%= link_to 'Back', lists_path %>
+<br>
+<%= link_to 'Edit List Properties', edit_list_path(@list) %> |
+<%= link_to 'Back to all Lists', lists_path %>
+<br><br><br>
+<%= link_to 'Destroy', @list, method: :delete, data: { confirm: 'Are you sure?' } %>

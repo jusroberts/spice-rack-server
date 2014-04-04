@@ -1,13 +1,8 @@
-<%= render 'header' %>
+<h2>My Lists</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -16,12 +11,7 @@
     <% id = current_user ? current_user.id : nil %>
     <% @lists.where(user_id: id).each do |list| %>
       <tr>
-        <td><%= list.name %></td>
-        <td><%= list.description %></td>
-        <td><%= list.user_id %></td>
-        <td><%= link_to 'Show', list %></td>
-        <td><%= link_to 'Edit', edit_list_path(list) %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to list.name, list %></td>
       </tr>
     <% end %>
   </tbody>

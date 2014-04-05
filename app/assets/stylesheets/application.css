@@ -78,5 +78,15 @@
   color: black;
   background-color: white;
 }
+
+.button {
+  padding: 1em;
+  width: 150px;
+  text-align: center;
+  background-color: #00af00;
+}
+.button:hover {
+  background-color: #00bf00;
+}
  
  

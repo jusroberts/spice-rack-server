@@ -1,3 +1,4 @@
+<% session[:list_id] = @list.id %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,7 +8,11 @@
 <p>
   <%= @list.description %>
 </p>
-<%= link_to 'Add New Item', new_item_path %>
+<%= link_to new_item_path do %>
+<div class='button'>
+ Add New Item
+</div>
+<% end %>
 <br>
 <div class='list'>
 <% @items.where(list_id: @list.id).each_with_index do |item, index| %>
@@ -24,7 +29,6 @@
 <% end %>
 </div>
     
-<% session[:list_id] = @list.id %>
 <br>
 <%= link_to 'Edit List Properties', edit_list_path(@list) %> |
 <%= link_to 'Back to all Lists', lists_path %>

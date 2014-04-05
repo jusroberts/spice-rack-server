@@ -7,29 +7,14 @@
 <p>
   <%= @list.description %>
 </p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Status</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.where(list_id: @list.id).each do |item| %>
-      <tr>
-        <td><%= item.name %></td>
-        <td><%= item.in_stock ? 'In' : 'Out of' %> stock</td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class='list'>
+<% @items.where(list_id: @list.id).each_with_index do |item, index| %>
+  <%= link_to edit_item_path(item) do %>
+    <div class='item-name list-item <%= index%2 == 0 ? 'even' : 'odd' %>'><%= item.name %></div>
+    <div class='list-item stock <%= item.in_stock ? 'in-stock' : 'out-of-stock' %>'><%= item.in_stock ? 'In' : 'Out of' %> stock</div>
+  <% end %>
+<% end %>
+</div>
     
 <% session[:list_id] = @list.id %>
 <%= link_to 'New Item', new_item_path %>

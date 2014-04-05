@@ -12,11 +12,58 @@
  *= require_tree .
  */
  
- .header {
+.header {
   display: inline-block;
   width: 49%;
- }
+}
  
- #login {
+#body {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+ 
+#login {
   text-align: right;
- }
+}
+ 
+.list-item {
+  padding-top: 10px;
+  height: 40px;
+  padding-left: 1em;
+}
+.item-name {
+  width: 80%;
+  display: inline-block;
+}
+.in-stock {
+  background-color: green;
+  display: inline-block;
+}
+.stock {
+  width: 17%;
+}
+.out-of-stock {
+  background-color: red;
+  display: inline-block;
+}
+.even {
+  background-color: #BABABA;
+}
+.odd {
+  background-color: #CFCFCF;
+}
+ 
+.title {
+  width: 100%;
+  color: white;
+  background-color: gray;
+}
+
+.description {
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+ 
+ 

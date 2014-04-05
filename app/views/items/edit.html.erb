@@ -1,6 +1,5 @@
 <h1>Editing item</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', list_path(session[:list_id]) %>
+<br>
+<%= link_to 'Back to list', list_path(session[:list_id]) %>

@@ -1,22 +1,14 @@
 <h2>My Lists</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% id = current_user ? current_user.id : nil %>
-    <% @lists.where(user_id: id).each do |list| %>
-      <tr>
-        <td><%= link_to list.name, list %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<% id = current_user ? current_user.id : nil %>
+<% @lists.where(user_id: id).each_with_index do |list, index| %>
+  <%= link_to list do %>
+    <div class='list-item <%= index%2 == 0 ? 'even' : 'odd' %>'>
+      <%= list.name %>
+    </div>
+  <% end %>
+<% end %>
 <br>
 
 <%= link_to 'New List', new_list_path if current_user %>

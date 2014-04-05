@@ -12,6 +12,11 @@
  *= require_tree .
  */
  
+ a {
+  text-decoration: none;
+  color: black
+ }
+ 
 .header {
   display: inline-block;
   width: 49%;
@@ -28,20 +33,25 @@
 }
  
 .list-item {
-  padding-top: 10px;
-  height: 40px;
-  padding-left: 1em;
+  padding: 8px 1em;
 }
 .item-name {
-  width: 80%;
+  width: 20%;
   display: inline-block;
 }
 .in-stock {
   background-color: green;
   display: inline-block;
 }
+.stock-wrapper {
+  display: inline-block;
+  text-align: right;
+  width: 79%;
+}
 .stock {
-  width: 17%;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
 }
 .out-of-stock {
   background-color: red;
@@ -52,6 +62,9 @@
 }
 .odd {
   background-color: #CFCFCF;
+}
+.list-item:hover {
+  background-color: #aaaaff;
 }
  
 .title {

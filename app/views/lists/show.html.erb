@@ -12,7 +12,9 @@
 </div>
 <% end %>
 <br>
-<br>Out of Stock<br>
+<br>
+<%= 'Out of Stock' unless @items.where(list_id: @list.id, in_stock: false).count == 0 %>
+<br>
 <div class='out-of-stock-list'>
 <% @items.where(list_id: @list.id, in_stock: false).each_with_index do |item, index| %>
   <%= link_to edit_item_path(item) do %>
@@ -23,7 +25,9 @@
 <% end %>
 </div>
 
-<br>In Stock<br>
+<br>
+<%= 'In Stock' unless @items.where(list_id: @list.id, in_stock: true).count == 0 %>
+<br>
 <div class='in-stock-list'>
 <% @items.where(list_id: @list.id, in_stock: true).each_with_index do |item, index| %>
   <%= link_to edit_item_path(item) do %>

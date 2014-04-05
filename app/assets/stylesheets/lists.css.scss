@@ -24,7 +24,6 @@
 
 .button {
   padding: 1em;
-  width: 100%;
   text-align: center;
   background-color: #00af00;
 }
@@ -47,7 +46,7 @@
   }
 }
 .list-item {
-  padding: 15px 1em;
+  padding: 1em 1em;
   &:hover {
     background-color: #aaaaff;
   }

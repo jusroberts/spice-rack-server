@@ -12,22 +12,13 @@
  *= require_tree .
  */
 body{
-  font-size: 20px;
+  font-size: 1em;
   
 }
  a {
   text-decoration: none;
   color: black
  }
- 
-.header {
-  display: inline-block;
-  width: 49%;
-}
- 
-#login {
-  text-align: right;
-}
  
  
  

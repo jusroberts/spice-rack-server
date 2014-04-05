@@ -12,16 +12,23 @@
 </div>
 <% end %>
 <br>
-<div class='list'>
-<% @items.where(list_id: @list.id).each_with_index do |item, index| %>
+<br>Out of Stock<br>
+<div class='out-of-stock-list'>
+<% @items.where(list_id: @list.id, in_stock: false).each_with_index do |item, index| %>
   <%= link_to edit_item_path(item) do %>
   <div class='list-item <%= index%2 == 0 ? 'even' : 'odd' %>'>
     <div class='item-name'><%= item.name %></div>
-    <div class='stock-wrapper'>
-      <div class='stock <%= item.in_stock ? 'in-stock' : 'out-of-stock' %>'>
-        <%= item.in_stock ? 'In' : 'Out of' %> stock
-      </div>
-    </div>
+  </div>
+  <% end %>
+<% end %>
+</div>
+
+<br>In Stock<br>
+<div class='in-stock-list'>
+<% @items.where(list_id: @list.id, in_stock: true).each_with_index do |item, index| %>
+  <%= link_to edit_item_path(item) do %>
+  <div class='list-item <%= index%2 == 0 ? 'even' : 'odd' %>'>
+    <div class='item-name'><%= item.name %></div>
   </div>
   <% end %>
 <% end %>

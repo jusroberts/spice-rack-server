@@ -1,3 +1,47 @@
 // Place all the styles related to the lists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.title {
+  width: 100%;
+  color: white;
+  background-color: gray;
+}
+
+.description {
+  width: 100%;
+  color: black;
+  background-color: white;
+}
+
+.button {
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+  background-color: #00af00;
+}
+.out-of-stock-list {
+  
+  .even {
+    background-color: #FFD3D3;
+  }
+  .odd {
+    background-color: #FFC7C7;
+  }
+}
+.in-stock-list {
+  
+  .even {
+    background-color: #D3FFD3;
+  }
+  .odd {
+    background-color: #BFFFBD;
+  }
+}
+.list-item {
+  padding: 15px 1em;
+  &:hover {
+    background-color: #aaaaff;
+  }
+}

@@ -4,30 +4,33 @@
 %p
   =@list.description
 =link_to new_item_path do
-  .button
+  .button.brown
     Add New Item
 %br
 %br
-=out_of_stock_field(@items, @list)
+.stock
+  .head
+    Out of Stock
+  .out-of-stock-list
+    -out_of_stock_items(@items, @list).each_with_index do |item, index|
+      =link_to edit_item_path(item) do
+        .list-item{class: "#{even_or_odd(index)}"}
+          .item-name
+            =item.name
+.stock.right
+  .head
+    In Stock
+  .in-stock-list
+    -in_stock_items(@items, @list).each_with_index do |item, index|
+      =link_to edit_item_path(item) do
+        .list-item{class: "#{even_or_odd(index)}"}
+          .item-name
+            =item.name
 %br
-.out-of-stock-list
-  -out_of_stock_items(@items, @list).each_with_index do |item, index|
-    =link_to edit_item_path(item) do
-      .list-item{class: "#{even_or_odd(index)}"}
-        .item-name
-          =item.name
-=in_stock_field(@items, @list)
-%br
-.in-stock-list
-  -in_stock_items(@items, @list).each_with_index do |item, index|
-    =link_to edit_item_path(item) do
-      .list-item{class: "#{even_or_odd(index)}"}
-        .item-name
-          =item.name
-%br
-=link_to 'Edit List Properties', edit_list_path(@list)
-|
-=link_to 'Back to all Lists', lists_path
+.button.brown
+  =link_to 'Back to all Lists', lists_path
+.button.brown.right
+  =link_to 'Edit List Properties', edit_list_path(@list)
 %br
 %br
 %br

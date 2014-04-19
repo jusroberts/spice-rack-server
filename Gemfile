@@ -29,8 +29,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-github'
 gem 'omniauth-facebook'
+gem 'haml'
+gem 'foundation-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

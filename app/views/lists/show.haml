@@ -17,9 +17,9 @@
       -out_of_stock_items(@items, @list).each_with_index do |item, index|
         .row{class: "#{even_or_odd(index)}"}
           =link_to edit_item_path(item) do
-            .item-name.columns.small-9.item
+            .item-name.columns.small-7.medium-9.item
               =item.name
-          .columns.small-3
+          .columns.small-5.medium-3
             =form_for(item) do |f|
               .form
                 =f.hidden_field :in_stock, :value => 1
@@ -32,9 +32,9 @@
       -in_stock_items(@items, @list).each_with_index do |item, index|
         .row{class: "#{even_or_odd(index)}"}
           =link_to edit_item_path(item) do
-            .item-name.columns.small-9.item
+            .item-name.columns.small-7.medium-9.item
               =item.name
-          .columns.small-3
+          .columns.small-5.medium-3
             =form_for(item) do |f|
               .form
                 =f.hidden_field :in_stock, :value => 0

@@ -10,6 +10,7 @@ class ListsController < ApplicationController
   # GET /lists/1
   # GET /lists/1.json
   def show
+    not_found unless owned?
   end
 
   # GET /lists/new
@@ -19,6 +20,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1/edit
   def edit
+    not_found unless owned?
   end
 
   # POST /lists
@@ -41,6 +43,7 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
+    not_found unless owned?
     respond_to do |format|
       if @list.update(list_params)
         format.html { redirect_to @list, notice: 'List was successfully updated.' }
@@ -55,6 +58,7 @@ class ListsController < ApplicationController
   # DELETE /lists/1
   # DELETE /lists/1.json
   def destroy
+    not_found unless owned?
     @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_url }
@@ -73,4 +77,14 @@ class ListsController < ApplicationController
     def list_params
       params.require(:list).permit(:name, :description, :user_id)
     end
+
+    def owned?
+      current_user.id == @list.user_id
+    end
+
+    def not_found
+      raise ActionController::RoutingError.new('Not Found')
+    end
+
 end
+

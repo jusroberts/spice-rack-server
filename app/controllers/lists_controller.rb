@@ -1,12 +1,11 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @lists = List.all
   end
 
   def show
-    not_found unless owned?
   end
 
   def new
@@ -14,7 +13,6 @@ class ListsController < ApplicationController
   end
 
   def edit
-    not_found unless owned?
   end
 
   def create
@@ -33,7 +31,6 @@ class ListsController < ApplicationController
   end
 
   def update
-    not_found unless owned?
     respond_to do |format|
       if @list.update(list_params)
         format.html { redirect_to @list, notice: 'List was successfully updated.' }
@@ -46,7 +43,6 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    not_found unless owned?
     @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_url }
@@ -57,12 +53,22 @@ class ListsController < ApplicationController
   private
 
   def set_list
-    @list = List.find(params[:id])
+    not_found unless owned?
+
+    @list = List.find params[:id]
     @list_items = @list.list_items.order :id
   end
 
   def list_params
     params.require(:list).permit(:name, :description, :user_id)
+  end
+
+  def owned?
+    current_user.id == @list.user_id
+  end
+
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
   end
 
 end

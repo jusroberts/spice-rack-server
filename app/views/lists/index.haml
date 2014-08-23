@@ -5,7 +5,7 @@
         My Racks
       -@lists.where(user_id: user_id).each_with_index do |list, index|
         =link_to list do
-          .list-item{class: "#{even_or_odd(index)}"}
+          .list-item
             =list.name
     .button.brown
       =link_to 'New List', new_list_path

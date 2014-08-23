@@ -32,6 +32,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'haml'
 gem 'foundation-rails'
+gem 'dotenv'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

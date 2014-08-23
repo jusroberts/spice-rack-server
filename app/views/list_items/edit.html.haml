@@ -1,0 +1,9 @@
+%h2 Update item
+= form_for(@list_item) do |f|
+  = f.hidden_field :id
+  .form
+    = f.label :in_stock
+    = f.check_box :in_stock
+  .actions
+    = f.submit
+= link_to('Back to list', list_path(@list_item.list_id))

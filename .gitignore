@@ -16,3 +16,6 @@
 /tmp
 #/config/newrelic.yml*
 #/config/initializers/devise.rb
+
+.env
+.ruby-version

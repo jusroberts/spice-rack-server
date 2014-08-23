@@ -6,6 +6,7 @@ class ListsController < ApplicationController
   end
 
   def show
+    not_found unless owned?
   end
 
   def new
@@ -13,6 +14,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    not_found unless owned?
   end
 
   def create
@@ -31,6 +33,7 @@ class ListsController < ApplicationController
   end
 
   def update
+    not_found unless owned?
     respond_to do |format|
       if @list.update(list_params)
         format.html { redirect_to @list, notice: 'List was successfully updated.' }
@@ -43,6 +46,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
+    not_found unless owned?
     @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_url }
@@ -62,3 +66,4 @@ class ListsController < ApplicationController
   end
 
 end
+

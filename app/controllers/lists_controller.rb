@@ -53,9 +53,10 @@ class ListsController < ApplicationController
   private
 
   def set_list
+    @list = List.find params[:id]
+    
     not_found unless owned?
 
-    @list = List.find params[:id]
     @list_items = @list.list_items.order :id
   end
 

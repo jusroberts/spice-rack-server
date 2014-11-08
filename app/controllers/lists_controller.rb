@@ -5,9 +5,6 @@ class ListsController < ApplicationController
     @lists = List.all
   end
 
-  def show
-  end
-
   def new
     @list = List.new
   end
@@ -21,7 +18,7 @@ class ListsController < ApplicationController
 
     respond_to do |format|
       if @list.save
-        format.html { redirect_to @list, notice: 'List was successfully created.' }
+        format.html { redirect_to root_path, notice: 'List was successfully created.' }
         format.json { render action: 'show', status: :created, location: @list }
       else
         format.html { render action: 'new' }
@@ -33,7 +30,7 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'List was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -45,7 +42,7 @@ class ListsController < ApplicationController
   def destroy
     @list.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url }
+      format.html { redirect_to root_path }
       format.json { head :no_content }
     end
   end

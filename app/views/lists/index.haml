@@ -1,13 +1,9 @@
 .full-width
   - if current_user
-    .stock.full-width
-      .head
-        My Racks
-      -@lists.where(user_id: user_id).each_with_index do |list, index|
-        =link_to list do
-          .list-item
-            =list.name
-    .button.brown
-      =link_to 'New List', new_list_path
+    - @lists.where(user_id: user_id).each_with_index do |list, index|
+      = render 'list', list: list, list_items: list.list_items.order(:id)
+    .row
+      .columns
+        .button.brown= link_to 'New List', new_list_path
   - else
     Login to create racks of what you have, and what you don't.

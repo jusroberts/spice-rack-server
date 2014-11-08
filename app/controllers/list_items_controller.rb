@@ -20,7 +20,7 @@ class ListItemsController < ApplicationController
     @list_item = ListItem.new list_item_params
 
     if @list_item.save
-      redirect_to(list_url(@list_item.list_id), notice: 'Item was successfully added.')
+      redirect_to(root_path, notice: 'Item was successfully added.')
     else
       render action: 'new'
     end
@@ -35,10 +35,20 @@ class ListItemsController < ApplicationController
     @list_item = ListItem.find list_item_params[:id]
 
     if @list_item.update list_item_params
-      redirect_to(list_url(@list_item.list_id), notice: 'Item was successfully updated.')
+      redirect_to(root_path, notice: 'Item was successfully updated.')
     else
       render action: 'edit'
     end
+  end
+
+  def destroy
+    flash[:notice] = 'Deleted'
+
+    ListItem.destroy params[:id]
+  rescue
+    flash[:notice] = 'Not Deleted'
+  ensure
+    redirect_to root_path
   end
 
   private

@@ -1,6 +1,6 @@
 .header
   =link_to root_path do
-    %h1 Rack Ninja
+    %h1 Pantrify.io
 .header#login
-  =link_to 'Log in / Register', new_user_session_path unless current_user
-  =link_to 'Log out', destroy_user_session_path, :method => :delete if current_user
+  = link_to 'Log in / Register', new_user_session_path unless current_user
+  = link_to 'Log out', destroy_user_session_path, :method => :delete if current_user

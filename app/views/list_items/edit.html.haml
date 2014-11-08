@@ -6,4 +6,6 @@
     = f.check_box :in_stock
   .actions
     = f.submit
-= link_to('Back to list', list_path(@list_item.list_id))
+= form_tag list_item_path(@list_item.id), method: :delete do
+  = submit_tag 'Delete'
+= link_to 'Back to Lists', root_path

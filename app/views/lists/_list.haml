@@ -1,16 +1,6 @@
 .row
   %h2.columns= list.name
-- new_list_item = ListItem.new list_id: list.id, in_stock: true
-= form_for new_list_item, html: { class: 'row' } do |f|
-  = f.hidden_field :list_id
-  .in-stock= f.hidden_field :in_stock
-  .small-6.columns= text_field_tag :name, nil, placeholder: "...new item?"
-  .small-6.columns.no-padding
-    .new-item-in-stock.text-center
-      In-stock?
-      %br
-      = list_item_in_stock_icon new_list_item
-    %span.add-new-item= icon 'plus', 'New Item'
+= render 'new_list_item_form', list: list
 = render 'list_items', list: list
 .bump
   .columns.small-4

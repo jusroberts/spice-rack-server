@@ -1,9 +1,7 @@
 - if current_user
+  = render 'new_list_form'
   - current_user.lists.each do |list|
     = render 'list', list: list
-  .row
-    .columns
-      .button.brown= link_to 'New List', new_list_path
 - else
   .row
     .columns

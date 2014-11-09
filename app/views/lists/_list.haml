@@ -1,9 +1,8 @@
 .row
-  %h2.columns= list.name
+  %h2.columns
+    = list.name
+    |
+    = form_for list, method: :delete, html: { class: 'list-delete' } do
+      = icon 'trash'
 = render 'new_list_item_form', list: list
 = render 'list_items', list: list
-.bump
-  .columns.small-4
-    .button.brown= link_to 'Edit List Properties', edit_list_path(list)
-  .columns.small-4
-    .button.brown.right= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' }

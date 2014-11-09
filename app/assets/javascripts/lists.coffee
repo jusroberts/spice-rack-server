@@ -18,7 +18,7 @@ $ ->
 
     $this.find('form').trigger 'submit'
 
-  $('.item-delete form').on 'click', (e) -> $(@).trigger 'submit'
+  $('.item-delete form, .list-delete').on 'click', -> $(@).trigger 'submit' if confirm 'Are you sure?'
 
   $('.new-item-in-stock').on 'click', ->
     $this = $ @

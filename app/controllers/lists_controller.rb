@@ -5,13 +5,15 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new list_params.merge(user_id: current_user.id)
-
-    if @list.save
-      redirect_to root_path, notice: 'List was successfully created.'
+    if List.new(list_params.merge user_id: current_user.id).save
+      notice = 'List was successfully created.'
     else
-      render action: 'new'
+      notice = 'Something went wrong.'
     end
+  rescue
+    notice = 'Something went wrong.'
+  ensure
+    redirect_to root_path, notice: notice
   end
 
   def update
@@ -29,7 +31,7 @@ class ListsController < ApplicationController
   def destroy
     @list.list_items.destroy_all
     @list.destroy
-    
+  ensure
     redirect_to root_path
   end
 

@@ -1,8 +1,14 @@
-.row
-  .small-12.columns
-    .header
+%header
+  .row
+    .columns
       =link_to root_path do
-        %h1 Pantrify.io
-    .header#login
-      = link_to 'Log in / Register', new_user_session_path unless current_user
-      = link_to 'Log out', destroy_user_session_path, :method => :delete if current_user
+        %h1 pantrify.io
+      .right
+        - if current_user
+          = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
+            = icon 'sign-out'
+            Sign Out
+        - else
+          = link_to new_user_session_path, class: 'pantrify-button' do
+            = icon 'sign-in'
+            Sign In

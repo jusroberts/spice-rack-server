@@ -1,11 +1,14 @@
+require 'food_display'
+
 module ListsHelper
 
-  def edit_list_item_link(list_item)
-    link_to(
-      list_item.in_stock ? 'I\'m Out!' : 'I\'ve Restocked!',
-      edit_list_item_path(list_item.id, in_stock: !list_item.in_stock),
-      class: 'columns'
-    )
+  def list_item_image_options list_item
+    list_item_display_data = FoodDisplay.data list_item.item.name
+
+    {
+      class: "icon-#{ list_item_display_data.image }",
+      style: "color: #{ list_item_display_data.color };"
+    }
   end
 
 end

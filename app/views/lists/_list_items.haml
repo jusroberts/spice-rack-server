@@ -1,0 +1,5 @@
+.row
+  .columns
+    .list-items
+      - list.list_items.order(:id).each do |list_item|
+        = render 'list_item', list_item: list_item

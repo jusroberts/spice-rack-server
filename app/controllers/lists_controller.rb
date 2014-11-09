@@ -1,50 +1,38 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_list, only: [ :edit, :update, :destroy ]
 
   def index
-    @lists = List.all
   end
 
   def new
     @list = List.new
   end
 
-  def edit
-  end
-
   def create
-    params[:list][:user_id] = current_user.id
-    @list = List.new(list_params)
+    @list = List.new list_params.merge(user_id: current_user.id)
 
-    respond_to do |format|
-      if @list.save
-        format.html { redirect_to root_path, notice: 'List was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @list }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
+    if @list.save
+      redirect_to root_path, notice: 'List was successfully created.'
+    else
+      render action: 'new'
     end
   end
 
+  def edit
+  end
+
   def update
-    respond_to do |format|
-      if @list.update(list_params)
-        format.html { redirect_to root_path, notice: 'List was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @list.errors, status: :unprocessable_entity }
-      end
+    if @list.update list_params
+      redirect_to root_path, notice: 'List was successfully updated.'
+    else
+      render action: 'edit'
     end
   end
 
   def destroy
     @list.destroy
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.json { head :no_content }
-    end
+    
+    redirect_to root_path
   end
 
   private
@@ -53,8 +41,6 @@ class ListsController < ApplicationController
     @list = List.find params[:id]
     
     not_found unless owned?
-
-    @list_items = @list.list_items.order :id
   end
 
   def list_params

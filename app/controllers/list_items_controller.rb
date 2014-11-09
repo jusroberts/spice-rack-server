@@ -32,7 +32,7 @@ class ListItemsController < ApplicationController
   end
 
   def update
-    @list_item = ListItem.find list_item_params[:id]
+    @list_item = ListItem.find params[:id]
 
     if @list_item.update list_item_params
       redirect_to(root_path, notice: 'Item was successfully updated.')
@@ -54,7 +54,7 @@ class ListItemsController < ApplicationController
   private
 
   def list_item_params
-    params.require(:list_item).permit(:list_id, :item_id, :in_stock, :id)
+    params.require(:list_item).permit(:list_id, :item_id, :in_stock)
   end
 
   def item_params

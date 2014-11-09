@@ -17,6 +17,7 @@ gem 'omniauth-facebook'
 gem 'haml'
 gem 'foundation-rails'
 gem 'dotenv'
+gem 'font-awesome-sass'
 
 group :development do
   gem 'better_errors'

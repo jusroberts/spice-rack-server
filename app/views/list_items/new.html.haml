@@ -1,6 +1,6 @@
 %h2 New item
 - @list_item.errors.each do |error, message| 
-  = "#{ Item.find(@list_item.item_id).name } is already on this rack!"
+  = "#{ @list_item.item.name } is already on this rack!"
   - @list_item.item_id = nil
 = form_for(@list_item) do |f|
   = f.hidden_field :item_id

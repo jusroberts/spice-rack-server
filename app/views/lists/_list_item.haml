@@ -1,11 +1,11 @@
 .item{ class: "#{ ' out' unless list_item.in_stock }" }
   .item-update
-    = list_item.item.name
-    = form_for list_item, method: :put do |f|
+    %span= raw "&nbsp;#{ list_item.item.name }&nbsp;"
+    = form_for list_item, method: :put, html: { class: 'right' } do |f|
       = f.hidden_field :in_stock, value: !list_item.in_stock
-      = icon (list_item.in_stock ? 'check-square-o' : 'square-o'), nil, data: { switch: !list_item.in_stock ? 'check-square-o' : 'square-o' }
+      = list_item_in_stock_icon list_item
   .bump
-  .text-center
+  .item-image.text-center
     %span{ list_item_image_options(list_item) }
   .item-delete.text-right
     = form_for list_item, method: :delete do |f|

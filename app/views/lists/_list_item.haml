@@ -5,7 +5,8 @@
       = f.hidden_field :in_stock, value: !list_item.in_stock
       = icon (list_item.in_stock ? 'check-square-o' : 'square-o'), nil, data: { switch: !list_item.in_stock ? 'check-square-o' : 'square-o' }
   .bump
-  %span{ list_item_image_options(list_item) }
-  .item-delete
+  .text-center
+    %span{ list_item_image_options(list_item) }
+  .item-delete.text-right
     = form_for list_item, method: :delete do |f|
       = icon 'trash'

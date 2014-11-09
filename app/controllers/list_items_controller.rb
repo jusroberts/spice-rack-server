@@ -1,9 +1,5 @@
 class ListItemsController < ApplicationController
 
-  def new
-    @list_item = ListItem.new list_id: params[:list_id]
-  end
-
   def create
     if list_item_params[:item_id].blank?
       item = Item.where(item_params).first
@@ -17,38 +13,39 @@ class ListItemsController < ApplicationController
       params[:list_item][:item_id] = item.id if item
     end
 
-    @list_item = ListItem.new list_item_params
+    list_item = ListItem.new list_item_params
 
-    if @list_item.save
-      redirect_to(root_path, notice: 'Item was successfully added.')
+    if list_item.save
+      notice = 'Item was successfully added.'
     else
-      render action: 'new'
+      notice = "#{ list_item.item.name } is already on this rack!"
     end
-  end
-
-  def edit
-    @list_item = ListItem.find params[:id]
-    @list_item.in_stock = params[:in_stock] == 'true' if params[:in_stock].present?
+  rescue
+    notice = 'Something went wrong.'
+  ensure
+    redirect_to root_path, notice: notice
   end
 
   def update
-    @list_item = ListItem.find params[:id]
-
-    if @list_item.update list_item_params
-      redirect_to(root_path, notice: 'Item was successfully updated.')
+    if ListItem.find(params[:id]).update list_item_params
+      notice = 'Item was successfully updated.'
     else
-      render action: 'edit'
+      notice = 'Something went wrong.'
     end
+  rescue
+    notice = 'Something went wrong.'
+  ensure
+    redirect_to root_path, notice: notice
   end
 
   def destroy
-    flash[:notice] = 'Deleted'
+    notice = 'Deleted'
 
     ListItem.destroy params[:id]
   rescue
-    flash[:notice] = 'Not Deleted'
+    notice = 'Not Deleted'
   ensure
-    redirect_to root_path
+    redirect_to root_path, notice: notice
   end
 
   private

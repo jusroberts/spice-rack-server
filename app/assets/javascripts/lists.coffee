@@ -1,4 +1,10 @@
 $ ->
+  toggleCheckbox = (checkboxContainer) ->
+    inStockCheckbox = checkboxContainer.find 'i'
+    previousCheck = inStockCheckbox.attr('class').split(' ')[1]
+
+    inStockCheckbox.attr('class', 'fa').addClass(inStockCheckbox.data().check).data 'check', previousCheck
+
   $('.in-stock input').val true
 
   $('.item-image').on 'click', -> $(@).siblings('.item-update').trigger 'click'
@@ -8,9 +14,7 @@ $ ->
 
     $this.parents('.item').toggleClass 'out'
 
-    inStockCheckbox = $this.find 'i'
-
-    inStockCheckbox.attr('class', 'fa').addClass inStockCheckbox.data().check
+    toggleCheckbox $this
 
     $this.find('form').trigger 'submit'
 
@@ -25,10 +29,7 @@ $ ->
     else
       inStockField.val 'true'
 
-    inStockCheckbox = $this.find 'i'
-    previousCheck = inStockCheckbox.attr('class').split(' ')[1]
-
-    inStockCheckbox.attr('class', 'fa').addClass(inStockCheckbox.data().check).data 'check', previousCheck
+    toggleCheckbox $this
 
   $('.add-new-item').on 'click', ->
     $this = $ @

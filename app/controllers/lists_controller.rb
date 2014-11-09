@@ -1,11 +1,7 @@
 class ListsController < ApplicationController
-  before_action :set_list, only: [ :edit, :update, :destroy ]
+  before_action :set_list, only: [ :update, :destroy ]
 
   def index
-  end
-
-  def new
-    @list = List.new
   end
 
   def create
@@ -18,18 +14,20 @@ class ListsController < ApplicationController
     end
   end
 
-  def edit
-  end
-
   def update
     if @list.update list_params
-      redirect_to root_path, notice: 'List was successfully updated.'
+      notice = 'List was successfully updated.'
     else
-      render action: 'edit'
+      notice = 'Something went wrong.'
     end
+  rescue
+    notice = 'Something went wrong.'
+  ensure
+    redirect_to root_path, notice: notice
   end
 
   def destroy
+    @list.list_items.destroy_all
     @list.destroy
     
     redirect_to root_path
@@ -44,7 +42,7 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    params.require(:list).permit(:name, :description, :user_id)
+    params.require(:list).permit(:name, :description)
   end
 
   def owned?

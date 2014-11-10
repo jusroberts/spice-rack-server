@@ -4,10 +4,14 @@
 .list-items > *
   vertical-align: top
 
+.fa-square-o
+  margin-right: 2.25px
+
 .item
   display: inline-block
   padding: 4px
   color: green
+  cursor: pointer
   form
     display: inline
     visibility: hidden
@@ -18,14 +22,12 @@
       word-wrap: break-word
       text-align: center
   .fa
-    padding: 0 2px
+    margin: 0 2px
   .fa-square-o
-    margin-right: 2.4px
-  [class^="icon-"]
-    padding-right: 0.5em
+    margin-right: 4.25px
   &.out
     color: red
-  &:hover, &.selected
+  &.selected
     color: inherit
     background: #FFDDAA
     form

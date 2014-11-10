@@ -7,18 +7,28 @@ $ ->
 
   $('.in-stock input').val true
 
-  $('.item-image').on 'click', -> $(@).siblings('.item-update').trigger 'click'
-
-  $('.item-update').on 'click', (e) ->
+  $('.list-items').on 'click', '.item.selected .item-image', ->
     $this = $ @
 
-    $this.parents('.item').toggleClass 'out'
+    $this.parents('.item').removeClass('selected').toggleClass 'out'
+
+    toggleCheckbox $this.siblings '.item-update'
+
+    $this.siblings('.item-update').find('form').trigger 'submit'
+
+  $('.list-items').on 'click', '.item.selected .item-update', (e) ->
+    $this = $ @
+
+    $this.parents('.item').removeClass('selected').toggleClass 'out'
 
     toggleCheckbox $this
 
     $this.find('form').trigger 'submit'
 
-  $('.item-delete form, .list-delete').on 'click', -> $(@).trigger 'submit' if confirm 'Are you sure?'
+  $('.list-items').on 'click', '.item', -> $(@).toggleClass 'selected'
+
+  $('.item-delete form, .list-delete').on 'click', ->
+    $(@).trigger 'submit' if confirm 'Are you sure you wish to delete this?'
 
   $('.new-item-in-stock').on 'click', ->
     $this = $ @

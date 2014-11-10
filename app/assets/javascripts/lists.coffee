@@ -49,6 +49,6 @@ $ ->
     if newItemNameField.val() isnt '' and 
       newItemForm.trigger 'submit'
     else
-      alert 'Please type in a name.'
+      alert 'Please type in a name for your item.'
 
       newItemNameField.trigger 'focus'

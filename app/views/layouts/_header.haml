@@ -7,9 +7,12 @@
         - if current_user
           = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
             = icon 'sign-out'
-            Sign Out
+            sign out
         - else
           = link_to new_user_session_path, class: 'pantrify-button' do
             = icon 'sign-in'
-            Sign In
+            sign in
   %hr
+  .row
+    .columns
+      = flash[:notice]

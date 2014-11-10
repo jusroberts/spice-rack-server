@@ -25,7 +25,9 @@ $ ->
 
     $this.find('form').trigger 'submit'
 
-  $('.list-items').on 'click', '.item', -> $(@).toggleClass 'selected'
+  $('.list-items').on 'click', '.item', ->
+    $('.item').removeClass 'selected'
+    $(@).toggleClass 'selected'
 
   $('.item-delete form, .list-delete').on 'click', ->
     $(@).trigger 'submit' if confirm 'Are you sure you wish to delete this?'
@@ -52,3 +54,7 @@ $ ->
       alert 'Please type in a name for your item.'
 
       newItemNameField.trigger 'focus'
+
+  $('#all').on 'click', -> $('.item').show()
+  $('#in-stock').on 'click', -> $('.item').hide().not('.out').show()
+  $('#out-of-stock').on 'click', -> $('.item').hide().filter('.out').show()

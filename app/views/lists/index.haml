@@ -1,17 +1,43 @@
 - if current_user
+  .bump
   = render 'new_list_form'
+  .row
+    .columns
+      %h2 your lists
+  - if current_user.lists.count == 0
+    .row
+      .columns
+        you haven't made any lists yet
+  - else
+    .row
+      .columns
+        #in-stock.pantrify-button= icon 'thumbs-up', 'show in-stock items'
+        #out-of-stock.pantrify-button= icon 'shopping-cart', 'show out-of-stock items'
+        #all.pantrify-button= icon 'th', 'show all items'
+    .bump
   - current_user.lists.each do |list|
     = render 'list', list: list
 - else
   .row
-    = form_tag user_registration_path, class: 'small-12 medium-6 columns no-padding', id: 'registration-form' do
+    .hide
+      = form_tag user_session_path, id: 'sign-in-form' do
+        = hidden_field_tag :'sign-in-email', nil, name: 'user[email]'
+        = password_field_tag :'sign-in-password', nil, name: 'user[password]'
+    .hide
+      = form_tag user_password_path, id: 'forgot-form' do
+        = hidden_field_tag :'forgot-email', nil, name: 'user[email]'
+    = form_tag user_registration_path, class: 'small-12 medium-6 columns', id: 'registration-form' do
       .row
         .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
-        .small-7.columns
+        .small-7.columns.no-padding
           = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]'
-        .small-5.columns
+        .small-5.columns.no-padding
           = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]'
       .row
-        .columns.text-right
+        .columns.text-right.no-padding
           #register.pantrify-button= icon 'user', 'register'
+          #sign-in.pantrify-button= icon 'sign-in', 'sign in'
+      .row
+        .columns.text-right.no-padding
+          #forgot.pantrify-button= icon 'question', 'forgot your password'
 

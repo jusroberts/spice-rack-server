@@ -1,8 +1,9 @@
 .row
-  %h2.columns
-    = list.name
-    |
-    = form_for list, method: :delete, html: { class: 'list-delete' } do
-      = icon 'trash'
+  .columns
+    %h3
+      = list.name
+      |
+      = form_for list, method: :delete, html: { class: 'list-delete' } do
+        = icon 'trash'
 = render 'new_list_item_form', list: list
 = render 'list_items', list: list

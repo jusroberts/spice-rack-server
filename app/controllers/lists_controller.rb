@@ -5,27 +5,23 @@ class ListsController < ApplicationController
   end
 
   def create
-    if List.new(list_params.merge user_id: current_user.id).save
-      notice = 'List was successfully created.'
-    else
-      notice = 'Something went wrong.'
+    unless List.new(list_params.merge user_id: current_user.id).save
+      flash[:notice] = 'Something went wrong.'
     end
   rescue
-    notice = 'Something went wrong.'
+    flash[:notice] = 'Something went wrong.'
   ensure
-    redirect_to root_path, notice: notice
+    redirect_to root_path
   end
 
   def update
-    if @list.update list_params
-      notice = 'List was successfully updated.'
-    else
-      notice = 'Something went wrong.'
+    unless @list.update list_params
+      flash[:notice] = 'Something went wrong.'
     end
   rescue
-    notice = 'Something went wrong.'
+    flash[:notice] = 'Something went wrong.'
   ensure
-    redirect_to root_path, notice: notice
+    redirect_to root_path
   end
 
   def destroy

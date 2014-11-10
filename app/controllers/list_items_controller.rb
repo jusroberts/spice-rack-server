@@ -15,37 +15,31 @@ class ListItemsController < ApplicationController
 
     list_item = ListItem.new list_item_params
 
-    if list_item.save
-      notice = 'Item was successfully added.'
-    else
-      notice = "#{ list_item.item.name } is already on this rack!"
+    unless list_item.save
+      flash[:notice] = "#{ list_item.item.name } is already on this rack!"
     end
   rescue
-    notice = 'Something went wrong.'
+    flash[:notice] = 'Something went wrong.'
   ensure
-    redirect_to root_path, notice: notice
+    redirect_to root_path
   end
 
   def update
-    if ListItem.find(params[:id]).update list_item_params
-      notice = 'Item was successfully updated.'
-    else
-      notice = 'Something went wrong.'
+    unless ListItem.find(params[:id]).update list_item_params
+      flash[:notice] = 'Something went wrong.'
     end
   rescue
-    notice = 'Something went wrong.'
+    flash[:notice] = 'Something went wrong.'
   ensure
-    redirect_to root_path, notice: notice
+    redirect_to root_path
   end
 
   def destroy
-    notice = 'Deleted'
-
     ListItem.destroy params[:id]
   rescue
-    notice = 'Not Deleted'
+    flash[:notice] = 'Something went wrong.'
   ensure
-    redirect_to root_path, notice: notice
+    redirect_to root_path
   end
 
   private

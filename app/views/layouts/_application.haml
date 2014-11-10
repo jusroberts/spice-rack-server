@@ -9,5 +9,10 @@
     = csrf_meta_tags
   %body
     = render 'layouts/header'
+    - if flash[:notice]
+      .row
+        .columns
+          %span.notice= flash[:notice]
+      .bump
     = yield
     = javascript_include_tag 'application'

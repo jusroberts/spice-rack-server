@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SpiceRackServer::Application.load_tasks
+Pantrify::Application.load_tasks

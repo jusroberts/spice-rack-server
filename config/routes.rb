@@ -1,4 +1,4 @@
-SpiceRackServer::Application.routes.draw do
+Pantrify::Application.routes.draw do
   get 'items/:q', to: 'items#index', format: :json
 
   resources :lists

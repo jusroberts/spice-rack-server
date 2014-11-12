@@ -7,9 +7,10 @@
         - if current_user
           = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
             = icon 'sign-out', 'sign out'
-  .row
-    #social.columns
-      = render 'layouts/pinterest'
-      = render 'layouts/facebook'
-      = render 'layouts/twitter'
+  - unless current_user
+    .row
+      #social.columns
+        = render 'layouts/pinterest'
+        = render 'layouts/facebook'
+        = render 'layouts/twitter'
   %hr

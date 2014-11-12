@@ -17,6 +17,9 @@
   - current_user.lists.each do |list|
     = render 'list', list: list
 - else
+  :javascript
+    if (window.location.href.indexOf('http://') === 0 && window.location.href.indexOf('.dev') < 0)
+      window.location = window.location.href.replace('http://', 'https://');
   .row
     .hide
       = form_tag user_session_path, id: 'sign-in-form' do

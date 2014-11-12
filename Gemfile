@@ -1,13 +1,16 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 4.0'
-gem 'sass-rails', '~> 4.0'
+
+gem 'jquery-rails'
 gem 'coffee-rails', '~> 4.0'
 gem 'uglifier', '~> 1.3'
-gem 'haml'
 
+gem 'sass-rails', '~> 4.0'
 gem 'foundation-rails'
 gem 'font-awesome-sass'
+
+gem 'haml'
 
 gem 'pg'
 gem 'dotenv'

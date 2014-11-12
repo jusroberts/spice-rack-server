@@ -8,7 +8,8 @@
           = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
             = icon 'sign-out', 'sign out'
   .row
-    .columns
+    #social.columns
       = render 'layouts/pinterest'
+      = render 'layouts/facebook'
       = render 'layouts/twitter'
   %hr

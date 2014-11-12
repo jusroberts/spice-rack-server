@@ -1,0 +1,10 @@
+#fb-root.hide
+:javascript
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=481127335269353&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+.fb-like{ data: { href: 'http://pantrify.io', layout: 'button', action: 'like', share: true } }

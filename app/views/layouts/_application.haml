@@ -8,6 +8,7 @@
     = stylesheet_link_tag 'application'
     = csrf_meta_tags
     = render 'layouts/seo'
+    = render 'layouts/ga'
   %body
     = render 'layouts/header'
     - if flash[:notice]
@@ -18,5 +19,4 @@
     = yield
     .bump
     = render 'layouts/footer'
-    = render 'layouts/ga'
     = javascript_include_tag 'application'

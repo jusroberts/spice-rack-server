@@ -4,7 +4,7 @@
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     %title= content_for?(:title) ? yield(:title) : 'pantrify.io - a simple kitchen inventory web app.'
-    %link{ href: 'http://fonts.googleapis.com/css?family=Ubuntu', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: '//fonts.googleapis.com/css?family=Ubuntu', rel: 'stylesheet', type: 'text/css' }
     = stylesheet_link_tag 'application'
     = csrf_meta_tags
     = render 'layouts/seo'

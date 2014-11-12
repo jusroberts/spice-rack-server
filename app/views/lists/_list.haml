@@ -1,7 +1,7 @@
 .row
   .columns
     %h3
-      = list.name
+      = list.title
       |
       = form_for list, method: :delete, html: { class: 'list-delete' } do
         = icon 'trash'

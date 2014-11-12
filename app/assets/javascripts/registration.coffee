@@ -3,7 +3,7 @@ $ ->
 
   validateCredentials = (callback, validatePassword = true) ->
     if $('#email').val() is ''
-      alert 'Please enter your email address.'
+      alert 'Please enter an email address.'
 
       $('#email').trigger 'focus'
 

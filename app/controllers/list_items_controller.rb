@@ -49,7 +49,7 @@ class ListItemsController < ApplicationController
   end
 
   def item_params
-    params[:name] = params[:name].downcase if params[:name].present?
+    params[:name] = params[:title].downcase.strip if params[:title].present?
 
     params.permit :name
   end

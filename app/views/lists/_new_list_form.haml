@@ -1,5 +1,5 @@
 - new_list = List.new user_id: current_user.id
 = form_for new_list, html: { class: 'row' } do |f|
-  .small-6.columns= f.text_field :name, placeholder: "...new list?"
-  .small-6.columns.no-padding
+  .small-9.medium-6.columns= f.text_field :title, placeholder: '...new list?'
+  .small-3.columns.end.no-padding
     %span.add-new-list.pantrify-button= icon 'plus', 'list'

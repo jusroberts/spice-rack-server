@@ -1,10 +1,13 @@
 %header
   .row
     .columns
-      =link_to root_path do
+      = link_to root_path do
         %h1 pantrify.io
       .right
         - if current_user
           = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
             = icon 'sign-out', 'sign out'
+  .row
+    .columns
+      = render 'layouts/pinterest'
   %hr

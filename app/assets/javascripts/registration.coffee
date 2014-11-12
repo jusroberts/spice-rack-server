@@ -28,18 +28,24 @@ $ ->
     callback()
 
   $('#sign-in').on 'click', ->
+    $('#password').show()
+
     validateCredentials ->
       $('#sign-in-email').val $('#email').val()
       $('#sign-in-password').val $('#password').val()
       $('#sign-in-form').trigger 'submit'
 
   $('#forgot').on 'click', ->
+    $('#password').hide()
+
     validateCredentials ->
       $('#forgot-email').val $('#email').val()
       $('#forgot-form').trigger 'submit'
     , false
 
   $('#registration-form').on 'submit', (e) ->
+    $('#password').show()
+
     validateCredentials ->
       $('#password-confirmation').val $('#password').val()
 

@@ -3,8 +3,6 @@ $ ->
 
   validateCredentials = (callback, validatePassword = true) ->
     if $('#email').val() is ''
-      alert 'Please enter an email address.'
-
       $('#email').trigger 'focus'
 
       e.preventDefault()
@@ -12,8 +10,6 @@ $ ->
       return
 
     if validatePassword and $('#password').val() is ''
-      alert 'Please enter a password.'
-
       $('#password').trigger 'focus'
 
       e.preventDefault()

@@ -1,24 +1,21 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.0.4'
+gem 'rails', '~> 4.0'
+gem 'sass-rails', '~> 4.0'
+gem 'coffee-rails', '~> 4.0'
+gem 'uglifier', '~> 1.3'
+gem 'haml'
+
+gem 'foundation-rails'
+gem 'font-awesome-sass'
 
 gem 'pg'
-gem 'sass-rails', '~> 4.0.2'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'dotenv'
 gem 'rack-timeout'
 
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'haml'
-gem 'foundation-rails'
-gem 'dotenv'
-gem 'font-awesome-sass'
 
 group :development do
   gem 'better_errors'

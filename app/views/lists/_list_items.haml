@@ -1,5 +1,5 @@
 .row
-  .columns.no-padding
+  .small-12.medium-8.columns.no-padding
     .list-items.text-center
       - list.list_items.order(:id).each do |list_item|
         = render 'list_item', list_item: list_item

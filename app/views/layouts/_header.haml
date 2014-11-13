@@ -5,6 +5,7 @@
         %h1 pantrify.io
       .right
         - if current_user
+          .bump
           = link_to destroy_user_session_path, method: :delete, class: 'pantrify-button' do
             = icon 'sign-out', 'sign out'
   - unless current_user

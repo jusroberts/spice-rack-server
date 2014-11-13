@@ -1,52 +1,52 @@
 $ ->
-  $('#register').on 'click', -> $('#registration-form').trigger 'submit'
-
   validateCredentials = (callback, validatePassword = true) ->
-    if $('#email').val() is ''
-      $('#email').trigger 'focus'
-
-      e.preventDefault()
+    if $('input[name="user[email]"]:visible').val() is ''
+      $('input[name="user[email]"]:visible').trigger 'focus'
 
       return
 
-    if validatePassword and $('#password').val() is ''
-      $('#password').trigger 'focus'
-
-      e.preventDefault()
+    if validatePassword and $('input[name="user[password]"]:visible').val() is ''
+      $('input[name="user[password]"]:visible').trigger 'focus'
 
       return
 
-    if validatePassword and $('#password').val().length < 8
+    if validatePassword and $('input[name="user[password]"]:visible').val().length < 8
       alert 'Your password needs to be at least 8 characters.'
 
-      $('#password').trigger 'focus'
-
-      e.preventDefault()
+      $('input[name="user[password]"]:visible').trigger 'focus'
 
       return
 
     callback()
 
-  $('#sign-in').on 'click', ->
-    $('#password').show()
+  $('#sign-in').on 'click', (e) ->
+    e.preventDefault()
+
+    $('form').hide()
+    $('#sign-in-form').show()
 
     validateCredentials ->
       $('#sign-in-email').val $('#email').val()
       $('#sign-in-password').val $('#password').val()
       $('#sign-in-form').trigger 'submit'
 
-  $('#forgot').on 'click', ->
-    $('#password').hide()
+  $('#forgot').on 'click', (e) ->
+    e.preventDefault()
+
+    $('form').hide()
+    $('#forgot-form').show()
 
     validateCredentials ->
       $('#forgot-email').val $('#email').val()
       $('#forgot-form').trigger 'submit'
     , false
 
-  $('#registration-form').on 'submit', (e) ->
-    $('#password').show()
+  $('#register').on 'click', (e) ->
+    e.preventDefault()
+
+    $('form').hide()
+    $('#registration-form').show()
 
     validateCredentials ->
       $('#password-confirmation').val $('#password').val()
-
-
+      $('#registration-form').trigger 'submit'

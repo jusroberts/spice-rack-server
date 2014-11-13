@@ -21,21 +21,32 @@
     if (window.location.href.indexOf('http://') === 0 && window.location.href.indexOf('.dev') < 0)
       window.location = window.location.href.replace('http://', 'https://');
   .row
-    .hide
-      = form_tag user_session_path, id: 'sign-in-form' do
-        = hidden_field_tag :'sign-in-email', nil, name: 'user[email]'
-        = password_field_tag :'sign-in-password', nil, name: 'user[password]'
-    .hide
-      = form_tag user_password_path, id: 'forgot-form' do
-        = hidden_field_tag :'forgot-email', nil, name: 'user[email]'
-    = form_tag user_registration_path, class: 'small-12 medium-6 columns', id: 'registration-form' do
-      .row
-        .columns.no-padding
-          = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]'
-      .row
-        .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
-        .columns.no-padding
-          = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]'
+    .small-12.medium-6.columns
+      = form_tag user_session_path, class: 'hide', id: 'sign-in-form' do
+        %h2 sign in
+        %input.hide{ type: 'submit' }
+        .row
+          .columns.no-padding
+            = text_field_tag :'sign-in-email', nil, placeholder: 'email', name: 'user[email]'
+        .row
+          .columns.no-padding
+            = password_field_tag :'sign-in-password', nil, placeholder: 'password', name: 'user[password]'
+      = form_tag user_password_path, class: 'hide', id: 'forgot-form' do
+        %h2 forgot password
+        %input.hide{ type: 'submit' }
+        .row
+          .columns.no-padding
+            = text_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]'
+      = form_tag user_registration_path, id: 'registration-form' do
+        %h2 register
+        %input.hide{ type: 'submit' }
+        .row
+          .columns.no-padding
+            = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]'
+        .row
+          .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
+          .columns.no-padding
+            = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]'
       .row
         .columns.text-right.no-padding
           #register.pantrify-button= icon 'user', 'register'
@@ -45,8 +56,7 @@
           #forgot.pantrify-button= icon 'question', 'forgot your password'
       .bump
     .small-12.medium-6.columns
-      welcome to pantrify.io
-      .bump
+      %h2 welcome to pantrify.io
       the minimalist kitchen inventory manager is here! register to start keeping track of your foodstuffs.
       .bump
 

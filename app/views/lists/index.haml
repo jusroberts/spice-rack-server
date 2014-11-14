@@ -18,6 +18,10 @@
       window.location = window.location.href.replace('http://', 'https://');
   .row
     .small-12.medium-6.columns
+      %h2 welcome to pantrify.io
+      the minimalist kitchen inventory manager is here! register to start keeping track of your foodstuffs.
+      .bump
+    .small-12.medium-6.columns
       = form_tag user_password_path, class: 'hide', id: 'forgot-form' do
         %h2 forgot password
         .hide= submit_tag
@@ -44,8 +48,3 @@
         .columns.text-right.no-padding
           #forgot.pantrify-button= icon 'question', 'forgot your password'
       .bump
-    .small-12.medium-6.columns
-      %h2 welcome to pantrify.io
-      the minimalist kitchen inventory manager is here! register to start keeping track of your foodstuffs.
-      .bump
-

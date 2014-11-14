@@ -1,8 +1,9 @@
 - new_list_item = ListItem.new list_id: list.id, in_stock: true
 = form_for new_list_item, html: { class: 'row' } do |f|
+  .hide= submit_tag
   = f.hidden_field :list_id
   .in-stock= f.hidden_field :in_stock
-  .small-6.columns= text_field_tag :title, nil, placeholder: "...new item?", class: 'new-item-title'
+  .small-6.columns= text_field_tag :title, nil, placeholder: "...new item?", class: 'new-item-title', required: true
   .small-6.columns.no-padding
     .new-item-in-stock.text-center
       stocked?

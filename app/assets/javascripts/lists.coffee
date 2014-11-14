@@ -29,8 +29,8 @@ $ ->
     $('.item').removeClass 'selected'
     $(@).toggleClass 'selected'
 
-  $('.item-delete form, .list-delete').on 'click', ->
-    $(@).trigger 'submit' if confirm 'Are you sure you wish to delete this?'
+  $('.list-delete').on 'click', -> $(@).trigger 'submit' if confirm 'Are you sure you wish to delete this?'
+  $('.item-delete form').on 'click', -> $(@).trigger 'submit'
 
   $('.new-item-in-stock').on 'click', ->
     $this = $ @

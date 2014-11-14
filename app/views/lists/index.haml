@@ -20,22 +20,22 @@
     .small-12.medium-6.columns
       = form_tag user_session_path, class: 'hide', id: 'sign-in-form' do
         %h2 sign in
-        %input.hide{ type: 'submit' }
+        .hide= submit_tag
         .row
           .columns.no-padding
-            = text_field_tag :'sign-in-email', nil, placeholder: 'email', name: 'user[email]'
+            = email_field_tag :'sign-in-email', nil, placeholder: 'email', name: 'user[email]'
         .row
           .columns.no-padding
             = password_field_tag :'sign-in-password', nil, placeholder: 'password', name: 'user[password]'
       = form_tag user_password_path, class: 'hide', id: 'forgot-form' do
         %h2 forgot password
-        %input.hide{ type: 'submit' }
+        .hide= submit_tag
         .row
           .columns.no-padding
-            = text_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]'
+            = email_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]'
       = form_tag user_registration_path, id: 'registration-form' do
         %h2 register
-        %input.hide{ type: 'submit' }
+        .hide= submit_tag
         .row
           .columns.no-padding
             = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]'

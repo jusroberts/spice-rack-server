@@ -1,4 +1,11 @@
 $ ->
+  switchForm = (formSelector) ->
+    $('input[type="email"]').val $('input[type="email"]:visible').val()
+    $('input[name="user[password]"]').val $('input[name="user[password]"]:visible').val()
+
+    $('form').hide()
+    $(formSelector).show()
+
   validateCredentials = (callback, validatePassword = true) ->
     if $('input[name="user[email]"]:visible').val() is ''
       $('input[name="user[email]"]:visible').trigger 'focus'
@@ -22,8 +29,7 @@ $ ->
   $('#sign-in').on 'click', (e) ->
     e.preventDefault()
 
-    $('form').hide()
-    $('#sign-in-form').show()
+    switchForm '#sign-in-form'
 
     validateCredentials ->
       $('#sign-in-email').val $('#email').val()
@@ -33,8 +39,7 @@ $ ->
   $('#forgot').on 'click', (e) ->
     e.preventDefault()
 
-    $('form').hide()
-    $('#forgot-form').show()
+    switchForm '#forgot-form'
 
     validateCredentials ->
       $('#forgot-email').val $('#email').val()
@@ -44,8 +49,7 @@ $ ->
   $('#register').on 'click', (e) ->
     e.preventDefault()
 
-    $('form').hide()
-    $('#registration-form').show()
+    switchForm '#registration-form'
 
     validateCredentials ->
       $('#password-confirmation').val $('#password').val()

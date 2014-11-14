@@ -14,11 +14,11 @@
     = render 'list', list: list
 - else
   :javascript
-    if (window.location.href.indexOf('http://') === 0 && window.location.href.indexOf('.dev') < 0)
+    if (window.location.href.indexOf('http://') === 0 && window.location.href.indexOf('spice-rack-server') < 0)
       window.location = window.location.href.replace('http://', 'https://');
   .row
     .small-12.medium-6.columns
-      %h2 welcome to pantrify.io
+      %h2 welcome
       the minimalist kitchen inventory manager is here! register to start keeping track of your foodstuffs.
       .bump
     .small-12.medium-6.columns

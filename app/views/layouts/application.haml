@@ -1,2 +1,23 @@
-= render layout: 'layouts/application' do
-  = yield
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+    %title= content_for?(:title) ? yield(:title) : 'pantrify.io'
+    %link{ href: '//fonts.googleapis.com/css?family=Ubuntu', rel: 'stylesheet', type: 'text/css' }
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tags
+    = render 'layouts/seo'
+    = render 'layouts/ios'
+    = render 'layouts/ga'
+  %body
+    = render 'layouts/header'
+    - if flash[:notice]
+      .row
+        .columns
+          %span.notice= flash[:notice]
+      .bump
+    = yield
+    .bump
+    = render 'layouts/footer'
+    = javascript_include_tag 'application'

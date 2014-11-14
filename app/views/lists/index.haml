@@ -1,13 +1,9 @@
 - if current_user
-  = render 'new_list_form'
   .row
     .columns
       %h2 your lists
-  - if current_user.lists.count == 0
-    .row
-      .columns
-        you haven't made any lists yet
-  - else
+  = render 'new_list_form'
+  - unless current_user.lists.count == 0
     .row
       .columns
         #in-stock.pantrify-button= icon 'thumbs-up', 'show in-stock items'

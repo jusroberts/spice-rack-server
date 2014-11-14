@@ -1,9 +1,0 @@
-apple:
-  color: '#993333'
-  image: apple
-banana:
-  color: '#FFCC00'
-  image: apple
-paprika:
-  color: orange
-  image: default

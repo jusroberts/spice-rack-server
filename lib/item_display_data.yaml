@@ -1,0 +1,273 @@
+apple:
+  color: '#993333'
+  icon: apple35
+banana:
+  color: '#FFE135'
+  icon: banana4
+apricot:
+  icon: apple12
+  color: '#000000'
+avocado:
+  icon: apple12
+  color: '#000000'
+breadfruit:
+  icon: apple12
+  color: '#000000'
+bilberry:
+  icon: apple12
+  color: '#000000'
+blackberry:
+  icon: apple12
+  color: '#000000'
+blackcurrant:
+  icon: apple12
+  color: '#000000'
+blueberry:
+  icon: apple12
+  color: '#000000'
+boysenberry:
+  icon: apple12
+  color: '#000000'
+cantaloupe:
+  icon: apple12
+  color: '#000000'
+currant:
+  icon: apple12
+  color: '#000000'
+cherry:
+  icon: apple12
+  color: '#000000'
+cherimoya:
+  icon: apple12
+  color: '#000000'
+cloudberry:
+  icon: apple12
+  color: '#000000'
+coconut:
+  icon: apple12
+  color: '#000000'
+cranberry:
+  icon: apple12
+  color: '#000000'
+cucumber:
+  icon: apple12
+  color: '#000000'
+damson:
+  icon: apple12
+  color: '#000000'
+date:
+  icon: apple12
+  color: '#000000'
+dragonfruit:
+  icon: apple12
+  color: '#000000'
+durian:
+  icon: apple12
+  color: '#000000'
+eggplant:
+  icon: apple12
+  color: '#000000'
+elderberry:
+  icon: apple12
+  color: '#000000'
+feijoa:
+  icon: apple12
+  color: '#000000'
+fig:
+  icon: apple12
+  color: '#000000'
+goji berry:
+  icon: apple12
+  color: '#000000'
+gooseberry:
+  icon: apple12
+  color: '#000000'
+grape:
+  icon: apple12
+  color: '#000000'
+raisin:
+  icon: apple12
+  color: '#000000'
+grapefruit:
+  icon: apple12
+  color: '#000000'
+guava:
+  icon: apple12
+  color: '#000000'
+huckleberry:
+  icon: apple12
+  color: '#000000'
+honeydew:
+  icon: apple12
+  color: '#000000'
+jackfruit:
+  icon: apple12
+  color: '#000000'
+jambul:
+  icon: apple12
+  color: '#000000'
+jujube:
+  icon: apple12
+  color: '#000000'
+kiwi:
+  icon: apple12
+  color: '#000000'
+kumquat:
+  icon: apple12
+  color: '#000000'
+lemon:
+  icon: apple12
+  color: '#000000'
+lime:
+  icon: apple12
+  color: '#000000'
+loquat:
+  icon: apple12
+  color: '#000000'
+lychee:
+  icon: apple12
+  color: '#000000'
+mango:
+  icon: apple12
+  color: '#000000'
+marion berry:
+  icon: apple12
+  color: '#000000'
+melon:
+  icon: apple12
+  color: '#000000'
+cantaloupe:
+  icon: apple12
+  color: '#000000'
+honeydew:
+  icon: apple12
+  color: '#000000'
+watermelon:
+  icon: apple12
+  color: '#000000'
+rock melon:
+  icon: apple12
+  color: '#000000'
+miracle fruit:
+  icon: apple12
+  color: '#000000'
+mulberry:
+  icon: apple12
+  color: '#000000'
+nectarine:
+  icon: apple12
+  color: '#000000'
+nut:
+  icon: apple12
+  color: '#000000'
+olive:
+  icon: apple12
+  color: '#000000'
+orange:
+  icon: apple12
+  color: '#000000'
+clementine:
+  icon: apple12
+  color: '#000000'
+mandarine:
+  icon: apple12
+  color: '#000000'
+blood orange:
+  icon: apple12
+  color: '#000000'
+tangerine:
+  icon: apple12
+  color: '#000000'
+papaya:
+  icon: apple12
+  color: '#000000'
+passionfruit:
+  icon: apple12
+  color: '#000000'
+peach:
+  icon: apple12
+  color: '#000000'
+pepper:
+  icon: apple12
+  color: '#000000'
+chili pepper:
+  icon: apple12
+  color: '#000000'
+bell pepper:
+  icon: apple12
+  color: '#000000'
+pear:
+  icon: apple12
+  color: '#000000'
+persimmon:
+  icon: apple12
+  color: '#000000'
+physalis:
+  icon: apple12
+  color: '#000000'
+plum:
+  icon: apple12
+  color: '#000000'
+prune:
+  icon: apple12
+  color: '#000000'
+pineapple:
+  icon: apple12
+  color: '#000000'
+pomegranate:
+  icon: apple12
+  color: '#000000'
+pomelo:
+  icon: apple12
+  color: '#000000'
+purple mangosteen:
+  icon: apple12
+  color: '#000000'
+quince:
+  icon: apple12
+  color: '#000000'
+raspberry:
+  icon: apple12
+  color: '#000000'
+western raspberry:
+  icon: apple12
+  color: '#000000'
+rambutan:
+  icon: apple12
+  color: '#000000'
+redcurrant:
+  icon: apple12
+  color: '#000000'
+salal berry:
+  icon: apple12
+  color: '#000000'
+salmon berry:
+  icon: apple12
+  color: '#000000'
+satsuma:
+  icon: apple12
+  color: '#000000'
+star fruit:
+  icon: apple12
+  color: '#000000'
+strawberry:
+  icon: apple12
+  color: '#000000'
+tamarillo:
+  icon: apple12
+  color: '#000000'
+tomato:
+  icon: apple12
+  color: '#000000'
+ugli fruit:
+  icon: apple12
+  color: '#000000'
+watermelon:
+  icon: apple12
+  color: '#000000'
+bacon:
+  icon: bacon1
+  color: '#72231F'
+paprika:
+  color: orange
+  icon: default

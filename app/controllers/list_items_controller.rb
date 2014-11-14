@@ -1,3 +1,5 @@
+require 'item_display_data_factory'
+
 class ListItemsController < ApplicationController
 
   def create
@@ -7,16 +9,25 @@ class ListItemsController < ApplicationController
       unless item
         item = Item.new item_params
 
+        item_display_data = ItemDisplayDataFactory.new(item.name).data
+
+        for item_name in item.name.split ' '
+          item_display_data = ItemDisplayDataFactory.new(item_name).data
+
+          break unless item_display_data.icon == 'default'
+        end if item_display_data.icon == 'default'
+
+        item.icon = item_display_data.icon
+        item.color = item_display_data.color
+
         item.save
       end
-
-      params[:list_item][:item_id] = item.id if item
     end
 
-    list_item = ListItem.new list_item_params
+    list_item = ListItem.new list_item_params.merge(item_id: item.id)
 
     unless list_item.save
-      flash[:notice] = "#{ list_item.item.name } is already on this rack!"
+      flash[:notice] = "#{ list_item.item.name } is already on this list!"
     end
   rescue
     flash[:notice] = 'Something went wrong.'
@@ -49,7 +60,7 @@ class ListItemsController < ApplicationController
   end
 
   def item_params
-    params[:name] = params[:title].downcase.strip if params[:title].present?
+    params[:name] = params[:title].downcase.strip.gsub /[^a-zA-Z0-9 ]/, '' if params[:title].present?
 
     params.permit :name
   end

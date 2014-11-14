@@ -7,4 +7,8 @@ Pantrify::Application.routes.draw do
   devise_for :users
 
   root 'lists#index'
+
+  devise_scope :user do
+    post 'magic', to: 'user#magic', as: :magic
+  end
 end

@@ -18,23 +18,14 @@
       window.location = window.location.href.replace('http://', 'https://');
   .row
     .small-12.medium-6.columns
-      = form_tag user_session_path, class: 'hide', id: 'sign-in-form' do
-        %h2 sign in
-        .hide= submit_tag
-        .row
-          .columns.no-padding
-            = email_field_tag :'sign-in-email', nil, placeholder: 'email', name: 'user[email]', required: true
-        .row
-          .columns.no-padding
-            = password_field_tag :'sign-in-password', nil, placeholder: 'password', name: 'user[password]', required: true
       = form_tag user_password_path, class: 'hide', id: 'forgot-form' do
         %h2 forgot password
         .hide= submit_tag
         .row
           .columns.no-padding
             = email_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]', required: true
-      = form_tag user_registration_path, id: 'registration-form' do
-        %h2 register
+      = form_tag magic_path, id: 'registration-form' do
+        %h2 register / sign in
         .hide= submit_tag
         .row
           .columns.no-padding
@@ -45,8 +36,10 @@
             = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]', required: true
       .row
         .columns.text-right.no-padding
-          #register.pantrify-button= icon 'user', 'register'
-          #sign-in.pantrify-button= icon 'sign-in', 'sign in'
+          #register.pantrify-button
+            = icon 'user', 'register'
+            = '/'
+            = icon 'sign-in', 'sign in'
       .row
         .columns.text-right.no-padding
           #forgot.pantrify-button= icon 'question', 'forgot your password'

@@ -6,15 +6,19 @@ $ ->
     $('form').hide()
     $(formSelector).show()
 
-  validateCredentials = (callback, validatePassword = true) ->
+  validateCredentials = (e, callback, validatePassword = true) ->
     if $('input[name="user[email]"]:visible').val() is ''
       $('input[name="user[email]"]:visible').trigger 'focus'
+
+      e.preventDefault()
 
       return
 
     if validatePassword and $('input[name="user[password]"]:visible').val() is ''
       $('input[name="user[password]"]:visible').trigger 'focus'
 
+      e.preventDefault()
+      
       return
 
     if validatePassword and $('input[name="user[password]"]:visible').val().length < 8
@@ -22,35 +26,24 @@ $ ->
 
       $('input[name="user[password]"]:visible').trigger 'focus'
 
+      e.preventDefault()
+      
       return
 
     callback()
 
-  $('#sign-in').on 'click', (e) ->
-    e.preventDefault()
-
-    switchForm '#sign-in-form'
-
-    validateCredentials ->
-      $('#sign-in-email').val $('#email').val()
-      $('#sign-in-password').val $('#password').val()
-      $('#sign-in-form').trigger 'submit'
-
-  $('#forgot').on 'click', (e) ->
-    e.preventDefault()
-
+  $('#forgot').on 'click', ->
     switchForm '#forgot-form'
 
-    validateCredentials ->
-      $('#forgot-email').val $('#email').val()
-      $('#forgot-form').trigger 'submit'
-    , false
+    $('#forgot-form').trigger 'submit'
 
-  $('#register').on 'click', (e) ->
-    e.preventDefault()
+  $('#forgot-form').on 'submit', (e) ->
+      validateCredentials e, -> $('#forgot-email').val $('#email').val(), false
 
+  $('#register').on 'click', ->
     switchForm '#registration-form'
 
-    validateCredentials ->
-      $('#password-confirmation').val $('#password').val()
-      $('#registration-form').trigger 'submit'
+    $('#registration-form').trigger 'submit'
+
+  $('#registration-form').on 'submit', (e) ->
+    validateCredentials e, -> $('#password-confirmation').val $('#password').val()

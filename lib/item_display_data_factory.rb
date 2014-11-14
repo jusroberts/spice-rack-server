@@ -32,7 +32,9 @@ class ItemDisplayDataFactory
     end
 
     def item_display_data_yaml
-      YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml")
+      Rails.cache.fetch 'ItemDisplayData', expires_in: 1.minute do
+        YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml")
+      end
     end
 
   end

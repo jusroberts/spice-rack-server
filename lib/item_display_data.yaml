@@ -268,6 +268,1005 @@ watermelon:
 bacon:
   icon: bacon1
   color: '#72231F'
+allspice:
+  icon: medical86
+  color: '#000000'
+anise:
+  icon: medical86
+  color: '#000000'
+basil:
+  icon: medical86
+  color: '#000000'
+bay leaf:
+  icon: medical86
+  color: '#000000'
+camphor:
+  icon: medical86
+  color: '#000000'
+caraway:
+  icon: medical86
+  color: '#000000'
+cardamom:
+  icon: medical86
+  color: '#000000'
+cassia:
+  icon: medical86
+  color: '#000000'
+cayenne pepper:
+  icon: medical86
+  color: '#000000'
+celery seed:
+  icon: medical86
+  color: '#000000'
+chaat masala:
+  icon: medical86
+  color: '#000000'
+chervil:
+  icon: medical86
+  color: '#000000'
+chili powder:
+  icon: medical86
+  color: '#000000'
+chives:
+  icon: medical86
+  color: '#000000'
+cicely:
+  icon: medical86
+  color: '#000000'
+cilantro:
+  icon: medical86
+  color: '#000000'
+cinnamon:
+  icon: medical86
+  color: '#000000'
+clove:
+  icon: medical86
+  color: '#000000'
+coriander seed:
+  icon: medical86
+  color: '#000000'
+coriander:
+  icon: medical86
+  color: '#000000'
+crab boil:
+  icon: medical86
+  color: '#000000'
+cress:
+  icon: medical86
+  color: '#000000'
+cumin:
+  icon: medical86
+  color: '#000000'
+curry leaf:
+  icon: medical86
+  color: '#000000'
+curry powder:
+  icon: medical86
+  color: '#000000'
+dill and dill seed:
+  icon: medical86
+  color: '#000000'
+dill:
+  icon: medical86
+  color: '#000000'
+doubanjiang:
+  icon: medical86
+  color: '#000000'
+douchi:
+  icon: medical86
+  color: '#000000'
+dried lime:
+  icon: medical86
+  color: '#000000'
+fennel:
+  icon: medical86
+  color: '#000000'
+galangal:
+  icon: medical86
+  color: '#000000'
+garam masala:
+  icon: medical86
+  color: '#000000'
+garlic powder:
+  icon: medical86
+  color: '#000000'
+garlic salt:
+  icon: medical86
+  color: '#000000'
+garlic:
+  icon: medical86
+  color: '#000000'
+ginger:
+  icon: medical86
+  color: '#000000'
+gochujang:
+  icon: medical86
+  color: '#000000'
+golpar:
+  icon: medical86
+  color: '#000000'
+grains of paradise:
+  icon: medical86
+  color: '#000000'
+grains of selim:
+  icon: medical86
+  color: '#000000'
+hemp:
+  icon: medical86
+  color: '#000000'
+horseradish:
+  icon: medical86
+  color: '#000000'
+jamaican jerk spice:
+  icon: medical86
+  color: '#000000'
+juniper berry:
+  icon: medical86
+  color: '#000000'
+lavender:
+  icon: medical86
+  color: '#000000'
+lemon balm:
+  icon: medical86
+  color: '#000000'
+lemon grass:
+  icon: medical86
+  color: '#000000'
+lemon pepper:
+  icon: medical86
+  color: '#000000'
+liquorice:
+  icon: medical86
+  color: '#000000'
+lovage:
+  icon: medical86
+  color: '#000000'
+mace:
+  icon: medical86
+  color: '#000000'
+mahlab:
+  icon: medical86
+  color: '#000000'
+mango-ginger:
+  icon: medical86
+  color: '#000000'
+marjoram:
+  icon: medical86
+  color: '#000000'
+mint:
+  icon: medical86
+  color: '#000000'
+mugwort:
+  icon: medical86
+  color: '#000000'
+mulling spices:
+  icon: medical86
+  color: '#000000'
+mustard:
+  icon: medical86
+  color: '#000000'
+nigella sativa:
+  icon: medical86
+  color: '#000000'
+nutmeg:
+  icon: medical86
+  color: '#000000'
+old bay seasoning:
+  icon: medical86
+  color: '#000000'
+onion powder:
+  icon: medical86
+  color: '#000000'
+oregano:
+  icon: medical86
+  color: '#000000'
+pakistani spices:
+  icon: medical86
+  color: '#000000'
+panch phoron:
+  icon: medical86
+  color: '#000000'
 paprika:
-  color: orange
-  icon: default
+  icon: medical86
+  color: '#000000'
+parsley:
+  icon: medical86
+  color: '#000000'
+black pepper:
+  icon: medical86
+  color: '#000000'
+peppercorn:
+  icon: medical86
+  color: '#000000'
+perilla:
+  icon: medical86
+  color: '#000000'
+persillade:
+  icon: medical86
+  color: '#000000'
+pomegranate seed:
+  icon: medical86
+  color: '#000000'
+radhuni:
+  icon: medical86
+  color: '#000000'
+recado rojo:
+  icon: medical86
+  color: '#000000'
+rose:
+  icon: medical86
+  color: '#000000'
+rosemary:
+  icon: medical86
+  color: '#000000'
+rue:
+  icon: medical86
+  color: '#000000'
+saffron:
+  icon: medical86
+  color: '#000000'
+sage:
+  icon: medical86
+  color: '#000000'
+salt:
+  icon: medical86
+  color: '#000000'
+sarsaparilla:
+  icon: medical86
+  color: '#000000'
+sassafras:
+  icon: medical86
+  color: '#000000'
+savory:
+  icon: medical86
+  color: '#000000'
+sesame:
+  icon: medical86
+  color: '#000000'
+shiso:
+  icon: medical86
+  color: '#000000'
+sorrel:
+  icon: medical86
+  color: '#000000'
+star anise:
+  icon: medical86
+  color: '#000000'
+sumac:
+  icon: medical86
+  color: '#000000'
+tabil:
+  icon: medical86
+  color: '#000000'
+tamarind:
+  icon: medical86
+  color: '#000000'
+tandoori masala:
+  icon: medical86
+  color: '#000000'
+tarragon:
+  icon: medical86
+  color: '#000000'
+thyme:
+  icon: medical86
+  color: '#000000'
+tonka bean:
+  icon: medical86
+  color: '#000000'
+turmeric:
+  icon: medical86
+  color: '#000000'
+vadouvan:
+  icon: medical86
+  color: '#000000'
+vanilla:
+  icon: medical86
+  color: '#000000'
+wasabi:
+  icon: medical86
+  color: '#000000'
+woodruff:
+  icon: medical86
+  color: '#000000'
+za'atar:
+  icon: medical86
+  color: '#000000'
+zedoary:
+  icon: medical86
+  color: '#000000'
+zereshk:
+  icon: medical86
+  color: '#000000'
+zest:
+  icon: medical86
+  color: '#000000'
+paprika:
+  color: '#990033'
+  icon: medical86
+beef:
+  color: '#000000'
+  icon: steak
+beef heart:
+  color: '#000000'
+  icon: steak
+beef liver:
+  color: '#000000'
+  icon: steak
+beef tongue:
+  color: '#000000'
+  icon: steak
+buffalo:
+  color: '#000000'
+  icon: steak
+goat:
+  color: '#000000'
+  icon: steak
+ham:
+  color: '#000000'
+  icon: steak
+kangaroo:
+  color: '#000000'
+  icon: steak
+lamb:
+  color: '#000000'
+  icon: steak
+mutton:
+  color: '#000000'
+  icon: steak
+pork:
+  color: '#000000'
+  icon: steak
+rabbit:
+  color: '#000000'
+  icon: steak
+sweetbreads:
+  color: '#000000'
+  icon: steak
+tripe:
+  color: '#000000'
+  icon: steak
+veal:
+  color: '#000000'
+  icon: steak
+venison:
+  color: '#000000'
+  icon: steak
+bison:
+  color: '#000000'
+  icon: steak
+chicken:
+  color: '#000000'
+  icon: christmas161
+turkey:
+  color: '#000000'
+  icon: christmas161
+chicken liver:
+  color: '#000000'
+  icon: christmas161
+cornish game hen:
+  color: '#000000'
+  icon: christmas161
+duck:
+  color: '#000000'
+  icon: christmas161
+duck liver:
+  color: '#000000'
+  icon: christmas161
+gizzards:
+  color: '#000000'
+  icon: christmas161
+goose:
+  color: '#000000'
+  icon: christmas161
+goose liver:
+  color: '#000000'
+  icon: christmas161
+grouse:
+  color: '#000000'
+  icon: christmas161
+guinea hen:
+  color: '#000000'
+  icon: christmas161
+ostrich:
+  color: '#000000'
+  icon: christmas161
+partridge:
+  color: '#000000'
+  icon: christmas161
+pheasant:
+  color: '#000000'
+  icon: christmas161
+quail:
+  color: '#000000'
+  icon: christmas161
+egg:
+  color: '#000000'
+  icon: egg4
+zucchini:
+  color: '#000000'
+  icon: vegetables1
+yarrow:
+  color: '#000000'
+  icon: vegetables1
+yardlong bean:
+  color: '#000000'
+  icon: vegetables1
+yao choy:
+  color: '#000000'
+  icon: vegetables1
+yam:
+  color: '#000000'
+  icon: vegetables1
+yacón:
+  color: '#000000'
+  icon: vegetables1
+winter melon:
+  color: '#000000'
+  icon: vegetables1
+winged bean:
+  color: '#000000'
+  icon: vegetables1
+wild leek:
+  color: '#000000'
+  icon: vegetables1
+wheatgrass:
+  color: '#000000'
+  icon: vegetables1
+west indian gherkin:
+  color: '#000000'
+  icon: vegetables1
+welsh onion:
+  color: '#000000'
+  icon: vegetables1
+watercress:
+  color: '#000000'
+  icon: vegetables1
+water spinach:
+  color: '#000000'
+  icon: vegetables1
+water chestnut:
+  color: '#000000'
+  icon: vegetables1
+water caltrop:
+  color: '#000000'
+  icon: vegetables1
+wasabi:
+  color: '#000000'
+  icon: vegetables1
+wakame:
+  color: '#000000'
+  icon: vegetables1
+velvet bean:
+  color: '#000000'
+  icon: vegetables1
+vanilla:
+  color: '#000000'
+  icon: vegetables1
+urad bean:
+  color: '#000000'
+  icon: vegetables1
+ulluco:
+  color: '#000000'
+  icon: vegetables1
+turnip:
+  color: '#000000'
+  icon: vegetables1
+turnip greens:
+  color: '#000000'
+  icon: vegetables1
+turmeric:
+  color: '#000000'
+  icon: vegetables1
+tomato:
+  color: '#000000'
+  icon: vegetables1
+tomatillo:
+  color: '#000000'
+  icon: vegetables1
+tinda:
+  color: '#000000'
+  icon: vegetables1
+tigernut:
+  color: '#000000'
+  icon: vegetables1
+tepary bean:
+  color: '#000000'
+  icon: vegetables1
+tatsoi:
+  color: '#000000'
+  icon: vegetables1
+tarwi:
+  color: '#000000'
+  icon: vegetables1
+taro:
+  color: '#000000'
+  icon: vegetables1
+swiss chard:
+  color: '#000000'
+  icon: vegetables1
+sweet potato:
+  color: '#000000'
+  icon: vegetables1
+sweet pepper:
+  color: '#000000'
+  icon: vegetables1
+swede:
+  color: '#000000'
+  icon: vegetables1
+summer purslane:
+  color: '#000000'
+  icon: vegetables1
+squash:
+  color: '#000000'
+  icon: vegetables1
+squash blossoms:
+  color: '#000000'
+  icon: vegetables1
+scallion:
+  color: '#000000'
+  icon: vegetables1
+spinach:
+  color: '#000000'
+  icon: vegetables1
+soybean:
+  color: '#000000'
+  icon: vegetables1
+sorrel:
+  color: '#000000'
+  icon: vegetables1
+soko:
+  color: '#000000'
+  icon: vegetables1
+snow pea:
+  color: '#000000'
+  icon: vegetables1
+snap pea:
+  color: '#000000'
+  icon: vegetables1
+skirret:
+  color: '#000000'
+  icon: vegetables1
+sierra leone bologi:
+  color: '#000000'
+  icon: vegetables1
+shallot:
+  color: '#000000'
+  icon: vegetables1
+sea lettuce:
+  color: '#000000'
+  icon: vegetables1
+sea kale:
+  color: '#000000'
+  icon: vegetables1
+sea grape:
+  color: '#000000'
+  icon: vegetables1
+sea beet:
+  color: '#000000'
+  icon: vegetables1
+sculpit:
+  color: '#000000'
+  icon: vegetables1
+scorzonera:
+  color: '#000000'
+  icon: vegetables1
+samphire:
+  color: '#000000'
+  icon: vegetables1
+salsify:
+  color: '#000000'
+  icon: vegetables1
+rutabaga:
+  color: '#000000'
+  icon: vegetables1
+runner bean:
+  color: '#000000'
+  icon: vegetables1
+ricebean:
+  color: '#000000'
+  icon: vegetables1
+rapini:
+  color: '#000000'
+  icon: vegetables1
+radish:
+  color: '#000000'
+  icon: vegetables1
+radicchio:
+  color: '#000000'
+  icon: vegetables1
+pumpkins:
+  color: '#000000'
+  icon: vegetables1
+pumpkin:
+  color: '#000000'
+  icon: vegetables1
+prairie turnip:
+  color: '#000000'
+  icon: vegetables1
+potato:
+  color: '#000000'
+  icon: vegetables1
+potato onion:
+  color: '#000000'
+  icon: vegetables1
+poke:
+  color: '#000000'
+  icon: vegetables1
+pignut:
+  color: '#000000'
+  icon: vegetables1
+pigeon pea:
+  color: '#000000'
+  icon: vegetables1
+pearl onion:
+  color: '#000000'
+  icon: vegetables1
+peanut:
+  color: '#000000'
+  icon: vegetables1
+pea:
+  color: '#000000'
+  icon: vegetables1
+parsnip:
+  color: '#000000'
+  icon: vegetables1
+paracress:
+  color: '#000000'
+  icon: vegetables1
+bok choy:
+  color: '#000000'
+  icon: vegetables1
+orache:
+  color: '#000000'
+  icon: vegetables1
+onion:
+  color: '#000000'
+  icon: vegetables1
+olive fruit:
+  color: '#000000'
+  icon: vegetables1
+okra:
+  color: '#000000'
+  icon: vegetables1
+ogonori:
+  color: '#000000'
+  icon: vegetables1
+nori:
+  color: '#000000'
+  icon: vegetables1
+nopal:
+  color: '#000000'
+  icon: vegetables1
+napa cabbage:
+  color: '#000000'
+  icon: vegetables1
+mustard (vegetable):
+  color: '#000000'
+  icon: vegetables1
+mung bean:
+  color: '#000000'
+  icon: vegetables1
+mozuku:
+  color: '#000000'
+  icon: vegetables1
+moth bean:
+  color: '#000000'
+  icon: vegetables1
+mizuna greens:
+  color: '#000000'
+  icon: vegetables1
+melokhia:
+  color: '#000000'
+  icon: vegetables1
+mashua:
+  color: '#000000'
+  icon: vegetables1
+malabar spinach:
+  color: '#000000'
+  icon: vegetables1
+luffa:
+  color: '#000000'
+  icon: vegetables1
+lotus root:
+  color: '#000000'
+  icon: vegetables1
+lima bean:
+  color: '#000000'
+  icon: vegetables1
+lettuce:
+  color: '#000000'
+  icon: vegetables1
+lentil:
+  color: '#000000'
+  icon: vegetables1
+lemongrass:
+  color: '#000000'
+  icon: vegetables1
+leek:
+  color: '#000000'
+  icon: vegetables1
+land cress:
+  color: '#000000'
+  icon: vegetables1
+lagos bologi:
+  color: '#000000'
+  icon: vegetables1
+kurrat:
+  color: '#000000'
+  icon: vegetables1
+kuka:
+  color: '#000000'
+  icon: vegetables1
+kombu:
+  color: '#000000'
+  icon: vegetables1
+komatsuna:
+  color: '#000000'
+  icon: vegetables1
+kohlrabi:
+  color: '#000000'
+  icon: vegetables1
+kale:
+  color: '#000000'
+  icon: vegetables1
+gai lan:
+  color: '#000000'
+  icon: vegetables1
+jícama:
+  color: '#000000'
+  icon: vegetables1
+jerusalem artichoke:
+  color: '#000000'
+  icon: vegetables1
+ivy gourd:
+  color: '#000000'
+  icon: vegetables1
+indian pea:
+  color: '#000000'
+  icon: vegetables1
+horseradish:
+  color: '#000000'
+  icon: vegetables1
+horse gram:
+  color: '#000000'
+  icon: vegetables1
+hijiki:
+  color: '#000000'
+  icon: vegetables1
+hamburg parsley:
+  color: '#000000'
+  icon: vegetables1
+guar:
+  color: '#000000'
+  icon: vegetables1
+green bean:
+  color: '#000000'
+  icon: vegetables1
+greater plantain:
+  color: '#000000'
+  icon: vegetables1
+good king henry:
+  color: '#000000'
+  icon: vegetables1
+golden samphire:
+  color: '#000000'
+  icon: vegetables1
+ginger:
+  color: '#000000'
+  icon: vegetables1
+garlic:
+  color: '#000000'
+  icon: vegetables1
+garlic chives:
+  color: '#000000'
+  icon: vegetables1
+garden rocket:
+  color: '#000000'
+  icon: vegetables1
+garbanzo:
+  color: '#000000'
+  icon: vegetables1
+galangal:
+  color: '#000000'
+  icon: vegetables1
+florence fennel:
+  color: '#000000'
+  icon: vegetables1
+fiddlehead:
+  color: '#000000'
+  icon: vegetables1
+fava bean:
+  color: '#000000'
+  icon: vegetables1
+ensete:
+  color: '#000000'
+  icon: vegetables1
+endive:
+  color: '#000000'
+  icon: vegetables1
+elephant garlic:
+  color: '#000000'
+  icon: vegetables1
+elephant foot yam:
+  color: '#000000'
+  icon: vegetables1
+eggplant:
+  color: '#000000'
+  icon: vegetables1
+earthnut pea:
+  color: '#000000'
+  icon: vegetables1
+drumstick:
+  color: '#000000'
+  icon: vegetables1
+dolichos bean:
+  color: '#000000'
+  icon: vegetables1
+dill:
+  color: '#000000'
+  icon: vegetables1
+daylily:
+  color: '#000000'
+  icon: vegetables1
+dandelion:
+  color: '#000000'
+  icon: vegetables1
+daikon:
+  color: '#000000'
+  icon: vegetables1
+cucumber:
+  color: '#000000'
+  icon: vegetables1
+cress:
+  color: '#000000'
+  icon: vegetables1
+courgette flowers:
+  color: '#000000'
+  icon: vegetables1
+corn salad:
+  color: '#000000'
+  icon: vegetables1
+collard greens:
+  color: '#000000'
+  icon: vegetables1
+chrysanthemum:
+  color: '#000000'
+  icon: vegetables1
+chives:
+  color: '#000000'
+  icon: vegetables1
+chinese mallow:
+  color: '#000000'
+  icon: vegetables1
+chinese artichoke:
+  color: '#000000'
+  icon: vegetables1
+chicory:
+  color: '#000000'
+  icon: vegetables1
+chickweed:
+  color: '#000000'
+  icon: vegetables1
+chickpea:
+  color: '#000000'
+  icon: vegetables1
+chayote:
+  color: '#000000'
+  icon: vegetables1
+chaya:
+  color: '#000000'
+  icon: vegetables1
+celtuce:
+  color: '#000000'
+  icon: vegetables1
+celery:
+  color: '#000000'
+  icon: vegetables1
+celery:
+  color: '#000000'
+  icon: vegetables1
+celeriac:
+  color: '#000000'
+  icon: vegetables1
+cauliflower:
+  color: '#000000'
+  icon: vegetables1
+catsear:
+  color: '#000000'
+  icon: vegetables1
+cassava:
+  color: '#000000'
+  icon: vegetables1
+carrot:
+  color: '#000000'
+  icon: vegetables1
+carola:
+  color: '#000000'
+  icon: vegetables1
+cardoon:
+  color: '#000000'
+  icon: vegetables1
+caper:
+  color: '#000000'
+  icon: vegetables1
+canna:
+  color: '#000000'
+  icon: vegetables1
+camas:
+  color: '#000000'
+  icon: vegetables1
+cabbage:
+  color: '#000000'
+  icon: vegetables1
+burdock:
+  color: '#000000'
+  icon: vegetables1
+brussels sprout:
+  color: '#000000'
+  icon: vegetables1
+broccolini flowers:
+  color: '#000000'
+  icon: vegetables1
+broccolini:
+  color: '#000000'
+  icon: vegetables1
+broccoli:
+  color: '#000000'
+  icon: vegetables1
+broadleaf arrowhead:
+  color: '#000000'
+  icon: vegetables1
+borage greens:
+  color: '#000000'
+  icon: vegetables1
+black-eyed pea:
+  color: '#000000'
+  icon: vegetables1
+bitter melon:
+  color: '#000000'
+  icon: vegetables1
+bitter gourd:
+  color: '#000000'
+  icon: vegetables1
+bell pepper:
+  color: '#000000'
+  icon: vegetables1
+beetroot:
+  color: '#000000'
+  icon: vegetables1
+beet greens:
+  color: '#000000'
+  icon: vegetables1
+bamboo shoot:
+  color: '#000000'
+  icon: vegetables1
+avocado:
+  color: '#000000'
+  icon: vegetables1
+asparagus:
+  color: '#000000'
+  icon: vegetables1
+arugula:
+  color: '#000000'
+  icon: vegetables1
+artichoke:
+  color: '#000000'
+  icon: vegetables1
+arracacha:
+  color: '#000000'
+  icon: vegetables1
+arame:
+  color: '#000000'
+  icon: vegetables1
+aonori:
+  color: '#000000'
+  icon: vegetables1
+american groundnut:
+  color: '#000000'
+  icon: vegetables1
+amaranth:
+  color: '#000000'
+  icon: vegetables1
+ahipa:
+  color: '#000000'
+  icon: vegetables1

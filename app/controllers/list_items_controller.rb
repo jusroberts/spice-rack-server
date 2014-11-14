@@ -11,7 +11,7 @@ class ListItemsController < ApplicationController
 
         item_display_data = ItemDisplayDataFactory.new(item.name).data
 
-        for item_name in item.name.split ' '
+        for item_name in item.name.split(' ').reverse
           item_display_data = ItemDisplayDataFactory.new(item_name).data
 
           break unless item_display_data.icon == 'default'

@@ -11,6 +11,20 @@ class ItemDisplayDataFactory
     ItemDisplayData.new icon, color
   end
 
+  def self.seed_data
+    YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml").each do |name, attributes|
+      item_params = { name: name }
+
+      item = Item.where(item_params).first
+      item ||= Item.new item_params
+
+      item.icon = attributes['icon']
+      item.color = attributes['color']
+
+      item.save
+    end
+  end
+
   private
 
   def item_display_data

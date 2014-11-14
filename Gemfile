@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '~> 4.0'
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'coffee-rails', '~> 4.0'
 gem 'uglifier', '~> 1.3'
 

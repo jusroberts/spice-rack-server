@@ -1,5 +1,5 @@
 Pantrify::Application.routes.draw do
-  get 'items/:q', to: 'items#index', format: :json
+  get 'items/:q', to: 'items#index'
 
   resources :lists
   resources :list_items, only: [ :create, :update, :destroy ]

@@ -11,24 +11,36 @@ class ItemDisplayDataFactory
     ItemDisplayData.new icon, color
   end
 
-  def self.seed_data
-    YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml").each do |name, attributes|
-      item_params = { name: name }
+  class << self
 
-      item = Item.where(item_params).first
-      item ||= Item.new item_params
+    def seed_data
+      YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml").each do |name, attributes|
+        item_params = { name: name }
 
-      item.icon = attributes['icon']
-      item.color = attributes['color']
+        item = Item.where(item_params).first
+        item ||= Item.new item_params
 
-      item.save
+        item.icon = attributes['icon']
+        item.color = attributes['color']
+
+        item.save
+      end
     end
+
+    def list
+      item_display_data_yaml.map { |key, _| key }
+    end
+
+    def item_display_data_yaml
+      YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml")
+    end
+
   end
 
   private
 
   def item_display_data
-    @item_display_data ||= YAML.load(File.open "#{ File.dirname(__FILE__) }/item_display_data.yaml")[item_name]
+    @item_display_data ||= ItemDisplayDataFactory.item_display_data_yaml[item_name]
   end
 
   def icon

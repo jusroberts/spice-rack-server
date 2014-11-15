@@ -10,5 +10,6 @@ Pantrify::Application.routes.draw do
 
   devise_scope :user do
     post 'magic', to: 'user#magic', as: :magic
+    post 'forgot', to: 'user#forgot', as: :forgot
   end
 end

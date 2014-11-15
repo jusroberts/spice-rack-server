@@ -52,6 +52,18 @@ class UserController < DeviseController
     redirect_to '/', notice: flash[:alert]
   end
 
+  def forgot
+    self.resource = resource_class.send_reset_password_instructions resource_params
+
+    yield resource if block_given?
+
+    if successfully_sent? resource
+      redirect_to '/', notice: flash[:alert]
+    else
+      redirect_to '/', notice: resource.errors.messages.map { |key, value| "#{ key } #{ value.first }." }.first
+    end
+  end
+
   private
 
   def sign_up_params

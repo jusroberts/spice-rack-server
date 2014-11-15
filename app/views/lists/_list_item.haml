@@ -1,12 +1,12 @@
 .item{ class: "#{ ' out' unless list_item.in_stock }" }
   .item-update
-    %span= raw "&nbsp;#{ list_item.item.name }&nbsp;"
     = form_for list_item, method: :put, html: { class: 'right' } do |f|
       = f.hidden_field :in_stock, value: !list_item.in_stock
       = list_item_in_stock_icon list_item
-  .bump
-  .item-image.text-center
-    %span{ list_item_image_options(list_item) }
-  .item-delete.text-right
+  .item-delete.text-left
     = form_for list_item, method: :delete do |f|
       = icon 'trash'
+  .item-image.text-center
+    %span{ list_item_image_options(list_item) }
+    .bump
+    %span.item-name= raw "&nbsp;#{ list_item.item.name }&nbsp;"

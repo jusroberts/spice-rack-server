@@ -3,10 +3,10 @@
   .hide= submit_tag
   = f.hidden_field :list_id
   .in-stock= f.hidden_field :in_stock
-  .small-6.columns= text_field_tag :title, nil, placeholder: "...new item?", class: 'new-item-title', required: true
-  .small-6.columns.no-padding
-    .new-item-in-stock.text-center
-      stocked?
-      %br
-      = list_item_in_stock_icon new_list_item
+  .small-9.medium-6.columns.end= text_field_tag :title, nil, placeholder: "...new item?", class: 'new-item-title', required: true, autocorrect: 'off'
+.row
+  .columns
     %span.add-new-item.pantrify-button= icon 'plus', 'item'
+    .new-item-in-stock.pantrify-button
+      = list_item_in_stock_icon new_list_item
+      have it!

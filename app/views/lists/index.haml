@@ -4,12 +4,13 @@
       %h2 your lists
   = render 'new_list_form'
   - unless current_user.lists.count == 0
+    %br
     .row
       .columns
         #in-stock.pantrify-button= icon 'thumbs-up', 'show in-stock items'
         #out-of-stock.pantrify-button= icon 'shopping-cart', 'show out-of-stock items'
         #all.pantrify-button= icon 'th', 'show all items'
-    .bump
+    %br
   - current_user.lists.each do |list|
     = render 'list', list: list
 - else
@@ -24,13 +25,12 @@
     .small-12.medium-6.columns
       = form_tag user_password_path, class: 'hide', id: 'forgot-form' do
         %h2 forgot password
-        .hide= submit_tag
         .row
           .columns.no-padding
             = email_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]', required: true
+        .hide= submit_tag
       = form_tag magic_path, id: 'registration-form' do
         %h2 register / sign in
-        .hide= submit_tag
         .row
           .columns.no-padding
             = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]', required: true
@@ -38,6 +38,7 @@
           .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
           .columns.no-padding
             = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]', required: true
+        .hide= submit_tag
       .row
         .columns.text-right.no-padding
           #register.pantrify-button

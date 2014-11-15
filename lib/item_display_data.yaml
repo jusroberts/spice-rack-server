@@ -165,7 +165,7 @@ olive:
   color: '#000000'
 orange:
   icon: apple12
-  color: '#000000'
+  color: '#f7c015'
 clementine:
   icon: apple12
   color: '#000000'
@@ -427,7 +427,7 @@ mace:
 mahlab:
   icon: medical86
   color: '#000000'
-mango-ginger:
+mango ginger:
   icon: medical86
   color: '#000000'
 marjoram:
@@ -1219,7 +1219,7 @@ broadleaf arrowhead:
 borage greens:
   color: '#000000'
   icon: vegetables1
-black-eyed pea:
+blackeyed pea:
   color: '#000000'
   icon: vegetables1
 bitter melon:
@@ -1270,3 +1270,130 @@ amaranth:
 ahipa:
   color: '#000000'
   icon: vegetables1
+cheese:
+  icon: cheese2
+  color: '#000000'
+bergenost:
+  icon: cheese2
+  color: '#000000'
+blue marble jack cheese:
+  icon: cheese2
+  color: '#000000'
+brick cheese:
+  icon: cheese2
+  color: '#000000'
+capriciou:
+  icon: cheese2
+  color: '#000000'
+caprizella:
+  icon: cheese2
+  color: '#000000'
+cheese curd:
+  icon: cheese2
+  color: '#000000'
+colby cheese:
+  icon: cheese2
+  color: '#000000'
+colbyjack cheese:
+  icon: cheese2
+  color: '#000000'
+cougar gold cheese:
+  icon: cheese2
+  color: '#000000'
+cream cheese:
+  icon: cheese2
+  color: '#000000'
+creole cream cheese:
+  icon: cheese2
+  color: '#000000'
+cup cheese:
+  icon: cheese2
+  color: '#000000'
+farmer cheese:
+  icon: cheese2
+  color: '#000000'
+hoop cheese:
+  icon: cheese2
+  color: '#000000'
+humboldt fog:
+  icon: cheese2
+  color: '#000000'
+kunik cheese:
+  icon: cheese2
+  color: '#000000'
+liederkranz cheese:
+  icon: cheese2
+  color: '#000000'
+maytag blue cheese:
+  icon: cheese2
+  color: '#000000'
+monterey jack:
+  icon: cheese2
+  color: '#000000'
+pepper jack cheese:
+  icon: cheese2
+  color: '#000000'
+dry jack cheese:
+  icon: cheese2
+  color: '#000000'
+point reyes original blue:
+  icon: cheese2
+  color: '#000000'
+muenster cheese:
+  icon: cheese2
+  color: '#000000'
+parmesan cheese:
+  icon: cheese2
+  color: '#000000'
+pinconning cheese:
+  icon: cheese2
+  color: '#000000'
+red hawk cheese:
+  icon: cheese2
+  color: '#000000'
+string cheese:
+  icon: cheese2
+  color: '#000000'
+swiss cheese:
+  icon: cheese2
+  color: '#000000'
+teleme cheese:
+  icon: cheese2
+  color: '#000000'
+american cheese:
+  icon: cheese2
+  color: '#000000'
+government cheese:
+  icon: cheese2
+  color: '#000000'
+provel cheese:
+  icon: cheese2
+  color: '#000000'
+velveeta:
+  icon: cheese2
+  color: '#000000'
+milk:
+  icon: box44
+  color: '#000000'
+juice:
+  icon: box44
+  color: '#000000'
+orange juice:
+  icon: box44
+  color: '#f7c015'
+apple juice:
+  icon: box44
+  color: '#993333'
+grapefruit juice:
+  icon: box44
+  color: '#000000'
+bread:
+  icon: bread8
+  color: '#000000'
+flour:
+  icon: money38
+  color: '#000000'
+sugar:
+  icon: money38
+  color: '#000000'
+

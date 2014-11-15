@@ -1,0 +1,19 @@
+= form_tag magic_path, id: 'registration-form' do
+  %h2 register / sign in
+  .row
+    .columns.no-padding
+      = email_field_tag :email, params[:email], placeholder: 'email', name: 'user[email]', required: true
+  .row
+    .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
+    .columns.no-padding
+      = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]', required: true
+  .row
+    .small-6.columns.no-padding
+      %label#register.pantrify-button
+        = icon 'user'
+        = submit_tag 'register'
+        \/
+        = icon 'sign-in'
+        sign in
+    .small-6.columns.text-right
+      %a#show-forgot-form= 'forgot password?'

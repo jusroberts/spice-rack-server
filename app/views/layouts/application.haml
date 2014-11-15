@@ -15,7 +15,7 @@
     - if flash[:notice]
       .row
         .columns
-          %span.notice= flash[:notice]
+          %span.notice= flash[:notice].downcase
       .bump
     = yield
     .bump

@@ -28,24 +28,10 @@
         .row
           .columns.no-padding
             = email_field_tag :'forgot-email', nil, placeholder: 'email', name: 'user[email]', required: true
-        .hide= submit_tag
-      = form_tag magic_path, id: 'registration-form' do
-        %h2 register / sign in
         .row
           .columns.no-padding
-            = email_field_tag :email, nil, placeholder: 'email', name: 'user[email]', required: true
-        .row
-          .hide= password_field_tag :'password-confirmation', nil, name: 'user[password_confirmation]'
-          .columns.no-padding
-            = password_field_tag :password, nil, placeholder: 'password', name: 'user[password]', required: true
-        .hide= submit_tag
-      .row
-        .columns.text-right.no-padding
-          #register.pantrify-button
-            = icon 'user', 'register'
-            = '/'
-            = icon 'sign-in', 'sign in'
-      .row
-        .columns.text-right.no-padding
-          #forgot.pantrify-button= icon 'question', 'forgot your password'
+            %label#forgot.pantrify-button
+              = icon 'send'
+              = submit_tag 'forgot', value: 'send email'
+      = render 'user_form'
       .bump

@@ -1,7 +1,9 @@
 - new_list = List.new user_id: current_user.id
-= form_for new_list, html: { class: 'row' } do |f|
-  .hide= submit_tag
-  .small-9.medium-6.columns.end= f.text_field :title, placeholder: '...new list?', required: true
-.row
-  .small-3.columns.end
-    %span.add-new-list.pantrify-button= icon 'plus', 'list'
+= form_for new_list do |f|
+  .row
+    .small-9.medium-6.columns.end= f.text_field :title, placeholder: '...new list?', required: true
+  .row
+    .small-3.columns.end
+      = label_tag :list, class: 'pantrify-button add-new-item' do
+        = icon 'plus'
+        = submit_tag :list

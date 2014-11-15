@@ -43,7 +43,7 @@ class UserController < DeviseController
 
         respond_with resource, location: after_sign_in_path_for(resource)
       else
-        respond_with resource
+        redirect_to '/', notice: resource.errors.messages.map { |key, value| "#{ key } #{ value.first }." }.first
       end
     end
   end

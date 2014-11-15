@@ -43,16 +43,6 @@ $ ->
 
     toggleCheckbox $this
 
-  $('.add-new-item, .add-new-list').on 'click', ->
-    $this = $ @
-    newItemForm = $this.parents 'form'
-    newItemNameField = newItemForm.find 'input[type="text"]'
-
-    if newItemNameField.val() isnt '' and 
-      newItemForm.trigger 'submit'
-    else
-      newItemNameField.trigger 'focus'
-
   $('#all').on 'click', -> $('.item').show()
   $('#in-stock').on 'click', -> $('.item').hide().not('.out').show()
   $('#out-of-stock').on 'click', -> $('.item').hide().filter('.out').show()
